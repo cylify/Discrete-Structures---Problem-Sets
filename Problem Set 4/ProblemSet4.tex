@@ -1,0 +1,245 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx} 
+
+\title{Problem Set 4}
+\author{Parvesh Adi Lachman}
+\date{October 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+
+\textbf{Claim}: Let $p,q\ge1$ be integers. If $d \nmid n^p$ then $d \nmid n$.\vspace{10pt}
+
+a) \begin{flushleft}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$n$ & $p$ & $n^p$ & $d$ & $d \mid n$ & $d \mid n^p$ & $d \nmid n$ & $d \nmid n^p$ \\
+\hline
+4 & 2 & 16 & 3 & F & F & T & T \\
+3 & 3 & 9 & 4 & F & F & T & T \\
+9 & 2 & 81 & 7 & F & F & T & T \\
+\hline
+\end{tabular}
+\end{flushleft} \vspace{10pt}
+
+b) Contrapositive of the claim: Let $p,q\ge1$ be integers. \textit{if} $d\;|\;n$ then $d\;|\;n^p$.\vspace{10pt}
+
+c) Proof: 
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{3.4cm}|p{5.8cm}|}
+    \hline
+     & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+    \hline
+    WTS & \textit{If} $d\;|\;n$ then $d\;|\;n^p$ & Since it is the contrapositive of the claim \\
+    \hline
+    Suppose & $d\;|\;n$ & By assumption \\
+    \hline
+    $\Rightarrow$ & $n = d\hspace{1pt}f,f\in\mathbb{Z}$ & By def of divisible by $d$ \\
+    \hline
+    $\Rightarrow$ & $n^p = (d\hspace{1pt}f)^p,p\in\mathbb{Z}$ & Putting both sides to the power of p \\
+    \hline
+    $\Rightarrow$ & $n^p = d^p\hspace{1pt}f^p$ & By algebra\\
+    \hline
+    $\Rightarrow$ & $n^p = d^p\hspace{1pt}k, k\in\mathbb{Z}$ & Since prod of ints is int \\
+    \hline
+    $\Rightarrow$ & $n^p = d(d^{p-1})k$ & By factoring $d$ \\
+    \hline
+    $\Rightarrow$ & $n^p = dck,c,k\in\mathbb{Z}$ & Since prod of ints is int \\
+    \hline
+    $\Rightarrow$ & $n^p = dv,v\in\mathbb{Z}$ & Since prod of ints is int\\
+    \hline
+    $\Rightarrow$ & $n^p$ is divisible by d & by def of divisible by $d$ \\
+    \hline
+    $\Rightarrow$ & $d\;|\;n^p$ & By def of divisible by $d$ \\
+    \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+d) The converse of the claim is: Let $p,q\ge1$ be integers.  If $d\nmid n$ then $d \nmid n^p$\pagebreak
+
+e) The converse is false. \vspace{2pt}
+
+Suppose $d = 4, p = 2, n = 6$, Then $d \nmid n = 4 \nmid 6$, we know that $n^p = 6^2 = 36$.  However $d\;|\;n^p = 4\;|\;36$, this is true since $36\div 4 = 9$.  This shows that the converse is false since an implication is only false when T $\Rightarrow$ F, which is what happens in the converse.  Thus we can conclude that the converse is false.
+
+\pagebreak
+
+\section{Problem 2}
+\textbf{Claim}: Let $f : 2^\mathbb{Z} \rightarrow 2^\mathbb{Z}$ be defined by $f(X) = \{x : x\in X$ and $x$ is even$\}$. Then $f$ is a function. ($2^\mathbb{Z}$ is just alternate notation for $P(\mathbb{Z})$, the powerset of $\mathbb{Z}$).\vspace{10pt}
+
+a) $f(X) = X\cap 2\mathbb{Z}$ \vspace{3pt}
+
+Reasoning: Since $x\in X$ and $x$ is even, along with that we know that $2^\mathbb{Z}$ is the set of even integers. Thus the function, $f(X)$ should be the intersection between $X$ and $2^\mathbb{Z}$.\vspace{10pt}
+
+b) Proof: 
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{3.4cm}|p{5.8cm}|}
+        \hline
+         & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+         \hline
+         WTS & For each $X\in2^\mathbb{Z}$ $f(X)$ is defined/computable & By def of property 1 \\
+         \hline
+         $\Rightarrow$ & $X\in 2^\mathbb{Z}$ & By assumption \\
+         \hline
+         $\Rightarrow$ & $X\cap 2\mathbb{Z}\mathbb\;\in\;2^\mathbb{Z}$ & Since $(Y\cap Z)\subseteq Y=(Y\cap Z)\in2^Y$ \\
+         \hline
+         $\Rightarrow$ & $f(X)\in2^\mathbb{Z}$  & By def of $f$\\
+         \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+c) Proof:
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{3.4cm}|p{5.8cm}|}
+         \hline
+          & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+          \hline
+          Suppose & We have two sets $A,B$ s.t. $A=B$, WTS $f(A)=f(B)$ & By def of Property 2 \\
+          \hline
+          $\Rightarrow$ & $A=B$ & By assumption \\
+          \hline
+          $\Rightarrow$ & $f(A)=A\cap 2\mathbb{Z}$ and $f(B)=B\cap 2\mathbb{Z}$ & By def of $f$\\
+          \hline
+          $\Rightarrow$ & $f(A)=f(B)$ & By substitution since $A=B$ \\
+          \hline 
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+d) Proof:
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{3.4cm}|p{5.8cm}|}
+         \hline
+          & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+          \hline
+          Suppose & $X\in 2^\mathbb{Z}$ & By assumption \\
+          \hline
+          $\Rightarrow$ & $X\subseteq \mathbb{Z}$ & Since $\mathbb{Z}\in \mathcal{P}(\mathbb{Z})$ \\
+          \hline
+          $\Rightarrow$ & $X\cap2\mathbb{Z} \subseteq \mathbb{Z}$ & Since $2\mathbb{Z}\subseteq\mathbb{Z}$ and since $(Y\cap Z)\subseteq Y$ for any sets $Y,Z$ \\
+          \hline
+          $\Rightarrow$ & $f(X)\subseteq\mathbb{Z}$ & By substitution \\
+          \hline
+          $\Rightarrow$ & $f(X)\in 2^\mathbb{Z}$ & Since $\mathbb{Z}\in \mathcal{P}(\mathbb{Z})$ \\
+          \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}\pagebreak
+
+e) Proof:
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{3.4cm}|p{5.8cm}|}
+         \hline
+          & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+          \hline
+         Suppose & $X \in 2^\mathbb{Z}$ & By assumption \\
+         \hline
+         $\Rightarrow$ & $X\subseteq\mathbb{Z}$ & Since $\mathbb{Z}\in \mathcal{P}(\mathbb{Z})$\\
+         \hline
+         $\Rightarrow$ & $X\subseteq2\mathbb{Z}$ & By def of $f$\\
+         \hline
+         $\Rightarrow$ & $X\cap2\mathbb{Z}\subseteq 2\mathbb{Z}$ & Since $(Y\cap Z)\subseteq Y$ for any sets $Y,Z$\\
+         \hline
+         $\Rightarrow$ & $f(X)\subseteq2\mathbb{Z}$ & By substitution\\
+         \hline
+         $\Rightarrow$ & $f(X)\in2^{2\mathbb{Z}}$ & Since $\mathbb{Z}\in\mathcal{P}(\mathbb{Z})$ \\
+         \hline
+
+    \end{tabular}
+\end{flushleft}
+
+
+\pagebreak
+\section{Problem 3}
+\textbf{Claim}: Let $A,B,C$ be sets.  If $f : A \rightarrow C$ is not a function then $B\not\subseteq C$ or $f : A \rightarrow B$ is not a function.\vspace{10pt}
+
+a) Contrapositive of the claim: Let $A,B,C$ be sets. If $B \subseteq C$ and $f : A \rightarrow B$ is a function then $f : A \rightarrow C$ is a function.\vspace{10pt}
+
+b) \textbf{Properties of the antecedent}:\vspace{2pt}
+\begin{itemize}
+    \item For each $a\in A, f(a)$ is computable/defined because $\forall a\in A, \exists b\in B\;\colon\;f(a)=b$
+    \item For each $a\in A, f(a)$ does not produce two different outputs because $\forall a\in A,\forall b_1,b_2\in B$ if $f(a)=b_1$ and $f(a)=b_2$ then $b_1=b_2$
+    \item For each $a\in A, f(a)\in B$
+\end{itemize}\vspace{10pt}
+
+c) \textbf{Properties of the consequent}:\vspace{2pt}
+\begin{itemize}
+    \item For each $a\in A, f(a)$ is computable/defined because $\forall a\in A, \exists c\in C\;\colon\;f(a)=c$
+    \item For each $a\in A, f(a)$ does not produce two different outputs because $\forall a\in A,\forall c_1,c_2\in C$ if $f(a)=c_1$ and $f(a)=c_2$ then $c_1=c_2$
+    \item For each $a\in A, f(a)\in C$ 
+\end{itemize}\vspace{10pt}
+
+\pagebreak
+
+d)\vspace{1pt}
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{5.4cm}|p{5.8cm}|}
+        \hline
+         & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True} \\
+        \hline
+        WTS that & If $B \subseteq C$ and $f : A \rightarrow B$ is a function, then $f : A \rightarrow C$ is a function. & Since this is the contrapositive of our claim.\\
+        \hline
+        Suppose & If $B \subseteq C$ and $f : A \rightarrow B$ is a function. & By assumption. \\
+        \hline
+        i.e., Suppose & \begin{itemize}
+        \item For each $a\in A$, $f(a)$ is computable/defined because $\forall a\in A, \exists b\in B\colon f(a)=b$
+        \item For each $a\in A$, $f(a)$ does not produce two different outputs because $\forall a\in A,\forall b_1,b_2\in B$ if $f(a)=b_1$ and $f(a)=b_2$ then $b_1=b_2$
+        \item For each $a\in A, f(a)\in B$
+\end{itemize} & By the 3 properties of functions.\\
+        \hline
+        WTS & $f: A \rightarrow C$ is a function & because this is the consequent \\
+        \hline
+        i.e., WTS & \begin{itemize}
+        \item For each $a\in A, f(A)$ is computable/defined because $\forall a\in A, \exists c\in C\;\colon\;f(a)=c$
+    \item For each $a\in A, f(A)$ does not produce two different outputs because $\forall a\in A,\forall c_1,c_2\in C$ if $f(a)=c_1$ and $f(a)=c_2$ then $c_1=c_2$
+    \item For each $a\in A, f(a)\in C$ 
+    \end{itemize} & By the 3 properties of functions \\
+    \hline
+        
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+\pagebreak
+
+\textbf{Property 1}:
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{5.4cm}|p{5.8cm}|}
+         \hline
+         & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True} \\
+        \hline
+        $\Rightarrow$ & $\forall a\in A, \exists b\in B\;\colon\;f(a)=b$ & By assumption\\
+        \hline
+        $\Rightarrow$ & $\forall a\in A, \exists c\in C\;\colon\;f(a)=c$ & Since $B\subseteq C$ and $\exists b\in B=\exists b\in C=\exists c\in C$ \\
+        \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+\textbf{Property 2}:
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{5.4cm}|p{5.8cm}|}
+         \hline
+         & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True} \\
+        \hline
+        $\Rightarrow$ & $\forall a\in A,\forall b_1,b_2\in B$ if $f(a)=b_1$ and $f(a)=b_2$ then $b_1=b_2$ & By assumption \\
+        \hline
+        $\Rightarrow$ & $\forall a\in A,\forall c_1,c_2\in C$ if $f(a)=c_1$ and $f(a)=c_2$ then $c_1=c_2$ & Since $B\subseteq C$ and $b_1,b_2\in C$ thus can be written as $c_1,c_2$\\
+        \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+
+\textbf{Property 3}:
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{5.4cm}|p{5.8cm}|}
+        \hline
+         & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True} \\
+        \hline
+        $\Rightarrow$ & $a\in A,f(a)\in B$ & By assumption \\
+        \hline
+        $\Rightarrow$ & $a\in A,f(a)\in C$ & Since $B\subseteq C$\\
+        \hline
+    \end{tabular}
+\end{flushleft}
+\end{document}
+

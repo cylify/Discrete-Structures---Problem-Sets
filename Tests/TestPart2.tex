@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Test Part 2}
+\author{Parvesh Adi Lachman}
+\date{October 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+\textbf{Claim:} $\{\;n\;\colon\;28\mid n\}\subseteq\{\;n\;\colon\;4\mid n\}\cap\{\;n\;\colon\;14\mid n\}$.\vspace{10pt}
+
+a) In order to prove $\{\;n\;\colon\;28\mid n\}\subseteq\{\;n\;\colon\;4\mid n\}\cap\{\;n\;\colon\;14\mid n\}$ we will show that \textit{if} $28\mid n$ \textit{then} $4\mid n$ and $14\mid n$.\vspace{10pt}
+
+b) To prove \textit{if} $28\mid n$ \textit{then} $4\mid n$ and $14\mid n$, we will assume $28\mid n$.  We want to show $4\mid n$ and $14\mid n$.\vspace{10pt}
+
+c) \textbf{Proof:} In order to show $\{n\;\colon\;28\mid n\}\subseteq\{n\;\colon\;4\mid n\}\cap\{n\;\colon\;14\mid n\}$, we will show the equivalent statement: \textit{if} $28\mid n$ \textit{then} $4\mid n$ and $14\mid n$. To do this, we will assume $28\mid n$; we want to show that $4\mid n$ and $14\mid n$.\vspace{5pt}
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{5.4cm}|p{5.8cm}|}
+    \hline
+     & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+    \hline
+     & $28\mid n$ & By assumption \\
+     \hline
+    $\Rightarrow$ & $n=28c,c\in\mathbb{Z}$ & By def of divisible by 28 \\
+    \hline
+    $\Rightarrow$ & $n=28c$ and $n=28c$, where $c\in\mathbb{Z}$ & By def of n and by def of and \\
+    \hline
+    $\Rightarrow$ & $n=4\cdot 7\cdot c$ and $n=14\cdot 2\cdot c$, where $c\in\mathbb{Z}$ & By refactoring \\
+    \hline
+    $\Rightarrow$ & $n=4k$ and $n=14l$, where $k,l\in\mathbb{Z}$ & Since product of ints is int \\
+    \hline
+    $\Rightarrow$ & $n$ is divisible by $4$ and $n$ is divisible by $14$ & By def of divisible by 4 and 14\\
+    \hline
+    $\Rightarrow$ & $4\mid n$ and $14\mid n$ & By def of divisible by 4 and 14 \\
+    \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+
+
+
+
+
+\pagebreak
+
+\section{Problem 2}
+\textbf{Claim:} Let $f,n,m\in\mathbb{Z}$. If $f\mid n$ and $f\nmid m$ then $f\nmid (n+m)$.
+
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{5.4cm}|p{5.9cm}|}
+    \hline
+     & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+    \hline
+    BWOC, suppose & There exists $f,n,m\in\mathbb{Z}$. such that $f\mid n$,$f\nmid m$ and $f\mid(n+m)$ & Since this is the negation of the claim\\
+    \hline
+    $\Rightarrow$ & $n=fc,\;(n+m)=fd,c,d\in\mathbb{Z}$ & By def of divisible by $f$\\
+    \hline
+    $\Rightarrow$ & $(n+m)-n=fd-fc,c,d\in\mathbb{Z}$ & By substitution\\
+    \hline
+    $\Rightarrow$ & $m=fd-fc,d,c\in\mathbb{Z}$ & By algebra \\
+    \hline
+    $\Rightarrow$ & $m=f(d-c),c,d\in\mathbb{Z}$ & By factoring \\
+    \hline 
+    $\Rightarrow$ & $m=fv,v\in\mathbb{Z}$ & Since difference of ints is int \\
+    \hline
+    $\Rightarrow$ & $m$ is divisible by $f$ & By def of divisible by $f$ \\ 
+    \hline
+    $\Rightarrow$ & $f\mid m$ & By def of divisible by $f$ \\
+    \hline
+    $\Rightarrow$ & Contradiction & Because we stated $f\nmid m$ and we showed that $f\mid n$, thus contradiction\\
+    \hline
+    \end{tabular}
+\end{flushleft}\vspace{5pt}
+
+Explanation: Since our negation of the claim was that there exists $f,n,m\in\mathbb{Z}$. such that $f\mid n$,$f\nmid m$ and $f\mid(n+m)$.  We assumed that $f\nmid m$, this means that $f$ does not divide $m$.  However when trying to prove by contradiction, we showed that $f\mid m$ from our assumption.  Thus we have proved our claim.
+
+
+\pagebreak
+\section{Problem 3}
+\textbf{Claim:} Let $p,q$ be prime numbers with $p\neq q$ (i.e they are distinct). Then $\sqrt{p\cdot q}$ is irrational.\vspace{10pt}
+
+\begin{flushleft}
+    \begin{tabular}{|p{1.3cm}|p{5.4cm}|p{5.8cm}|}
+    \hline
+     & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+    \hline
+    BWOC, suppose & $\sqrt{p\cdot q}$ is rational & Since this is the negation of our claim \\
+    \hline
+    $\Rightarrow$ & $\sqrt{p\cdot q}=\frac{n}{d}$ where $n,d\in\mathbb{Z},d\neq 0$, and $n,d$ are in their lowest forms & By def of rational \\
+    \hline
+    $\Rightarrow$ & $p\cdot q=\frac{n^2}{d^2}$ & By squaring both sides \\
+    \hline
+    $\Rightarrow$ & $d^2p\cdot q=n^2$ & By algebra\\
+    \hline
+    $\Rightarrow$ & $p\cdot q\mid n^2$ & By def of divisible by $p\cdot q$ \\
+    \hline
+    $\Rightarrow$ & $p\cdot q\mid n$ & For $n\in\mathbb{Z}$, if $n^2$ is even then $n$ is even, and if $n^2$ is odd then $n$ is odd.  If $p\cdot q\mid n^2$ then $p\cdot q\mid n$ \\
+    \hline
+    $\Rightarrow$ & $n=p\cdot q\cdot c$, where $c\in\mathbb{Z}$ & By def of divisible by $p\cdot q$ \\
+    \hline
+    $\Rightarrow$ & $d^2p\cdot q=c^2\cdot q^2\cdot p^2,c\in\mathbb{Z}$ & By substitution \\
+    \hline
+    $\Rightarrow$ & $p\cdot q\cdot c^2=d^2,c\in\mathbb{Z}$ & By algebra\\
+    \hline
+    $\Rightarrow$ & $p\cdot q\mid d^2$ & By def of divisible by $p\cdot q$ \\
+    \hline
+    $\Rightarrow$ & $p\cdot q\mid d$ & For $n\in\mathbb{Z}$, if $n^2$ is even then $n$ is even, and if $n^2$ is odd then $n$ is odd.  If $p\cdot q\mid n^2$ then $p\cdot q\mid n$ \\
+    \hline
+    $\Rightarrow$ & Contradiction & Because $p\cdot q$ cannot divide both $n$ and $d$ \\
+    \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+Explanation: Since we assumed that that $n,d$ are in their lowest forms, both $n$ and $d$ cannot be divided by $p\cdot q$.  We know that $p$ and $q$ are distinct primes such that $(n,d)=1$.  In the proof we showed that $p\cdot q$ divides $n$ and $d$, which is not true. Thus there is a contradiction.
+
+\end{document}
+
+
