@@ -1,0 +1,194 @@
+\documentclass{article} 
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\title{Problem Set 6}
+\author{Parvesh Adi Lachman}
+\date{November 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+
+\textbf{Claim:} For any integer $n\geq 1$,
+
+\begin{equation}
+	\sum_{i=1}^{n} i(i+3)=\frac{n(n+1)(n+5)}{3}.
+\end{equation}
+
+\textbf{Step 0:} For all $n\geq 1$, we want to show $\sum_{i=1}^{n} i(i+3)=\frac{n(n+1)(n+5)}{3}$.
+\vspace{15pt}
+
+\textbf{Step 1:} For all $n\geq 1$, let $P(n)$ be the property that 
+\[
+	4+10+18+28+\cdots+(n-1)((n-1)+3)+n(n+3)=\frac{n(n+1)(n+5)}{3}.
+\]  
+\hspace{15pt}We want to show that $P(n)$ is true for all $n\geq 1$.
+
+\vspace{15pt}
+
+\textbf{Step 2:} As a base case, consider $n=1$\@. We will show that $P(1)$ is true: that is, that $1(1+3)=\frac{1(1+1)(1+5)}{3}$\@. Fortunately, this is true since LHS = $1(1+3)=4$ and RHS = $\frac{1(1+1)(1+5)}{3}=4$ thus LHS = RHS. 
+
+\vspace{15pt}
+
+\textbf{Step 3:} For the induction hypothesis, suppose (hypothetically) that $P(k)$ were true for some fixed $k\geq 1$. That is suppose that $\sum_{i=1}^{k} i(i+3)=\frac{k(k+1)(k+5)}{3}$, which is $[4+10+18+28+\cdots +(k-1)((k-1)+3)+k(k+3)]=\frac{k(k+1)(k+5)}{3}$.
+
+\vspace{15pt}
+
+\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using the (hypothetical) induction assumption that $P(k)$ is true. That is, we prove that $\sum_{i=1}^{k+1} i(i+3)=\frac{(k+1)(k+2)(k+6)}{3}$ which is $[4+10+18+28+\cdots+k(k+3)+(k+1)((k+1)+3)]$.
+
+\pagebreak
+
+\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is a follows:
+
+\vspace{10pt}
+
+\begin{sloppypar} 
+	\begin{tabular}{l l l l}
+		Left hand side of \(P(k+1)\) & = & \(4+10+18+28+\cdots+k(k+3)\) & \\
+    	                             & + & \((k+1)((k+1)+3)\) & \\
+									 & = & \((4+10+18+28+\cdots+k(k+3))\) & \\
+									 & + & \((k+1)((k+1)+3)\) & \\
+									 & = & \(\frac{k(k+1)(k+5)}{3} + (k+1)((k+1)+3)\) & By IH \\
+									 & = & \(\frac{k(k+1)(k+5)}{3}+\frac{3(k+1)(k+4)}{3}\) & By algebra \\
+									 & = & \(\frac{k(k+1)(k+5)+3(k+1)(k+4)}{3}\) & By algebra \\
+									 & = & \(\frac{(k+1)(k^2+5k)+(k+1)(3k+12)}{3}\) & By algebra \\
+									 & = & \(\frac{(k+1)(k^2+8k+12)}{3}\) & By factoring $(k+1)$ \\
+									 &   &                                & and algebra \\
+									 & = & \(\frac{(k+1)(k+2)(k+6)}{3}\) & By factoring \\
+									 & = & Right hand side of \(P(k+1)\)
+	\end{tabular}
+\end{sloppypar}
+
+\vspace{10pt}
+Therefore we have shown that \textit{if} $P(k)$ is true, then $P(k+1)$ is also true for any $k\geq 1$.\vspace{15pt}
+
+
+\textbf{Step 6:} The steps above have shown that for any $k\geq 1$, if $P(k)$ is true, then $P(k+1)$ is also true. Combined with the base case, which shows that $P(1)$ is true, we have shown that for all $n\geq 1$, $P(n)$ is true, as desired.
+\pagebreak
+
+
+\section{Problem 2}
+
+\textbf{Claim:} Let $n\geq 2$, and let $A_1,A_2,\ldots$,$A_n$ be sets from some universal set $U$. For all $n\geq 2$,
+
+\begin{equation}
+	\overline{\bigcup_{i=1}^{n}A_i}=\bigcap_{j=1}^{n}\overline{A_j}	
+\end{equation}
+
+\textbf{Step 0:} For all $n\geq 2$, we want to show that $\overline{\bigcup_{i=1}^{n}A_i}=\bigcap_{j=1}^{n}\overline{A_j}$
+
+\vspace{15pt}
+
+
+\textbf{Step 1:} For any $n\geq 2$, let $P(n)$ be the property that,
+\[
+	\overline{\bigcup_{i=1}^{n}A_i}=\bigcap_{j=1}^{n}\overline{A_j}
+\]
+
+\hspace{15pt} We want to show that $P(n)$ is true for all $n\geq 2$.
+
+\vspace{15pt}
+
+\textbf{Step 2:} As a base case, consider when $n=2$. We will show that $P(2)$ is true: that is, that $\overline{A_1\cup A_2}=\overline{A_1}\cap\overline{A_2}$. Fortunately, this is true by definition of De Morgan's law, since De Morgan's law states that $\overline{A\cup B}=\overline{A}\cap\overline{B}$.
+
+\vspace{15pt}
+
+\textbf{Step 3:} For the induction hypothesis, suppose (hypothetically) that $P(k)$ is true for some fixed $k\geq 2$. That is, suppose that	$\overline{\bigcup_{i=1}^{k}A_i}=\bigcap_{j=1}^{k}\overline{A_j}$.
+\vspace{15pt}
+
+\textbf{Step 4:} Now we prove that $P(k+1)$ is true using the (hypothetical) induction assumption that $P(k)$ is true. That is, we prove that
+\[
+	\overline{\bigcup_{i=1}^{k+1}A_i}=\bigcap_{j=1}^{k+1}\overline{A_j}
+\]
+\vspace{15pt}
+
+\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is as follows: 
+
+\begin{sloppypar}
+	\begin{tabular}{l l l l}
+		Left hand side of $P(k+1)$ & = & \(\overline{\bigcup_{i=1}^{k+1}A_i}\) & \\
+								   & = & \(\overline{\left(\bigcup_{i=1}^{k}A_i\right)\cup A_{k+1}}\) & By pulling the \\
+								   &   &                                                              & (k+1)st term   \\
+								   &   &                                                              & out of a union \\
+								   & = & \(\overline{\bigcup_{i=1}^{k}A_i}\cap\overline{A_{k+1}}\) & By De Morgan's Law \\
+								   & = & \(\bigcup_{j=1}^{k}\overline{A_j}\cap\overline{A_{k+1}}\) & By IH \\
+								   & = & \(\bigcup_{j=1}^{k+1}\overline{A_j}\) & By pushing in the (k+1)st \\
+								   &   &                                       & into the intersection \\
+								   & = & Right hand side of $P(k+1)$ & \\
+	\end{tabular}	
+\end{sloppypar}
+Therefore we have shown that \textit{if} $P(k)$ is true, then $P(k+1)$ is also true for any $k\geq 2$.\vspace{15pt}
+
+
+\textbf{Step 6:} The steps above have shown that for any $k\geq 2$, if $P(k)$ is true, then $P(k+1)$ is also true. Combined with the base case, which shows that $P(2)$ is true, we have shown that for all $n\geq 2$, $P(n)$ is true, as desired.
+
+\pagebreak
+
+\section{Problem 3}
+
+\textbf{Claim:} For all $n\geq 1$,
+
+\begin{equation}
+	\sum_{i=1}^{n} s_i=s_{n+2}-4
+\end{equation}
+
+\textbf{Step 0:} For all $n\geq 1$, we want to show that $\sum_{i=1}^{n} s_i=s_{n+2}-4$.
+\vspace{15pt}
+
+\textbf{Step 1:} For any $n\geq 1$, let $P(n)$ be the property that
+\[
+	\sum_{i=1}^{n} s_i=s_{n+2}-4	
+\]
+
+\hspace{15pt} We want to show that $P(n)$ is true for all $n\geq 1$.
+
+\vspace{15pt}
+
+\textbf{Step 2:} As a base case, consider when $n=1$.  We will show that $P(1)$ is true: that is, that $\sum_{i=1}^{1} s_i=s_{1+2}-4$.  Fortunately, this is true, using the sharp number sequence, $s_1=2$ and $s_{1+2}-4=s_3-4=6-4=2$, thus LHS = RHS.
+
+\vspace{15pt}
+
+\textbf{Step 3:} For the induction hypothesis, suppose (hypothetically) that $P(k)$ were true for some fixed $k\geq 1$. That is suppose that
+\[
+	\sum_{i=1}^{k} s_i=s_{k+2}-4	
+\]
+ 
+\vspace{15pt}
+
+\textbf{Step 4:} Now we prove $P(k+1)$ is true, using the (hypothetical) induction assumption that $P(k)$ is true. That is, we prove that 
+\[
+	\sum_{i=1}^{k+1} s_i=s_{(k+1)+2}-4
+	= \sum_{i=1}^{k+1} s_i=s_{k+3}-4	
+\]
+
+\vspace{15pt}
+
+\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is as follows:
+
+\begin{sloppypar}
+	\begin{tabular}{l l l l}
+		Left hand side of $P(k+1)$ & = & $\sum_{i=1}^{k+1} s_i$ & \\
+								   & = & $\sum_{i=1}^{k} s_i + s_{k+1}$ & By pulling out\\
+								   &   &                                & The (k+1)st term out \\
+								   &   &                                & the summation \\
+								   & = & $s_{k+2}-4+s_{k+1}$ & By IH \\
+								   & = & $s_{k+2}+s_{k+1}-4$ & By rewriting \\
+								   & = & $s_{k+3}-4$ & By def of our sequence \\
+								   & = & Right hand side of $P(k+1)$
+		
+	\end{tabular}	
+\end{sloppypar}
+
+Therefore we have shown that \textit{if} $P(k)$ is true, then $P(k+1)$ is also true for any $k\geq 1$.\vspace{15pt}
+
+
+\textbf{Step 6:} The steps above have shown that for any $k\geq 1$, if $P(k)$ is true, then $P(k+1)$ is also true. Combined with the base case, which shows that $P(1)$ is true, we have shown that for all $n\geq 1$, $P(n)$ is true, as desired.
+
+
+\end{document}

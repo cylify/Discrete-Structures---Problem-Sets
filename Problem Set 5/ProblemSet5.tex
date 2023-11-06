@@ -1,0 +1,514 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\title{Problem Set 5}
+\author{Parvesh Adi Lachman}
+\date{October 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+
+
+a) \textbf{Claim:} $\forall w,x,y,z\in\mathbb{Z}\vcentcolon  3\mid (w-y)(w-z)(x-w)(x-y)(x-z)(y-z)$ \vspace{10pt}
+
+
+\textbf{Proof:}\vspace{5pt}
+
+\begin{itemize}
+	\item Let the pigeons $(A)$ be the set $\{x,y,z,w\}$ where $x,y,z,w\in\mathbb{Z}$;
+	\item Let the pigeonholes $(B)$ be the set $\{0,1,2\}$;
+	\item Let $f\vcentcolon A\rightarrow B$ be defined $f(a)\vcentcolon = remainderDivBy3(a)$. Note that $f$ is a well defined function:
+		\begin{enumerate}
+			\item for any pigeon $a\in \{x,y,z,w\}$, $f(a)=remainderDivBy3(a)$ is computable because $a\div 3$ is defined,
+			\item for any pigeon $a\in \{x,y,z,w\}$, if $remainderDivBy3(a)=b$ and $remainderDivBy3(a)=c$ then $b=c$, ,
+			\item for any pigeon $a\in \{x,y,z,w\}$, $remainderDivBy3(a)$ is within the codomain $\{0,1,2\}$ by def of divisible by 3
+		\end{enumerate}
+
+\end{itemize}
+
+\begin{flushleft} 
+	\begin{tabular}{|p{0.5cm}|p{6.6cm}|p{5.5cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        $\Rightarrow$ & $|A| = 4$ & Because $A=\{x,y,z,w\}$ \\
+        \hline
+        $\Rightarrow$ & $|B| = 3$ & Because $B=\{0,1,2\}$ \\
+        \hline
+        $\Rightarrow$ & $|A|>|B|$ & Since $4>3$ \\ 
+        \hline
+        $\Rightarrow$ & $\exists a_1,a_2\in A\vcentcolon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ (i.e. pigeons $a_1\neq a_2$ with same pigeonhole) & By def of pigeonhole principle \\
+        \hline
+        $\Rightarrow$ & $a_1,a_2\in{x,y,z,w}\land(a_1\neq a_2)\land(remainderDivBy3(a_1)=remainderDivBy3(a_2))$ & By def of $A$ and $f$ \\
+        \hline
+        $\Rightarrow$ & $3\mid (a_1-a_2)$ and $3\mid (a_2-a_1)$ & Since difference of two ints of the same function is also divisible by 3, and by def of equivalence class\\
+        \hline
+        $\Rightarrow$ & at least one of $(w-y),(w-z),(x-w),(x-y),(x-z),(y-z)$ is divisible by 3 & Since this is all pairs and $a_1\neq a_2$\\
+        \hline
+        $\Rightarrow$ & $(w-y)(w-z)(x-w)(x-y)(x-z)(y-z)$ is divisible by 3 & Since prod of div by 3 ints is still div by 3\\
+        \hline
+        $\Rightarrow$ & $3\mid (w-y)(w-z)(x-w)(x-y)(x-z)(y-z)$ & By def of divisible by 3 \\
+        \hline
+	\end{tabular}
+\end{flushleft}\vspace{10pt}
+
+
+b)  The claim would hold true.  Let us remove $(w-z)$.\vspace{10pt}
+
+\textbf{Proof:}
+\begin{flushleft} 
+	\begin{tabular}{|p{0.5cm}|p{5.6cm}|p{6cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        $\Rightarrow$ & $|A| = 4$ & Because $A=\{x,y,z,w\}$ \\
+        \hline
+        $\Rightarrow$ & $|B| = 3$ & Because $B=\{0,1,2\}$ \\
+        \hline
+        $\Rightarrow$ & $|A|>|B|$ & Since $4>3$ \\ 
+        \hline
+        $\Rightarrow$ & $\exists a_1,a_2\in A\vcentcolon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ (i.e. pigeons $a_1\neq a_2$ with same pigeonhole) & By def of pigeonhole principle \\
+        \hline
+        $\Rightarrow$ & $a_1,a_2\in{x,y,z,w}\land(a_1\neq a_2)\land(remainderDivBy3(a_1)=remainderDivBy3(a_2))$ & By def of $A$ and $f$ \\
+        \hline
+        $\Rightarrow$ & $3\mid (a_1-a_2)$ and $3\mid (a_2-a_1)$ & Since difference of two ints of the same function is also divisible by 3, and by def of equivalence class\\
+        \hline
+        $\Rightarrow$ & at least one of $(w-y),(x-w),(x-y),(x-z),(y-z)$ is divisible by 3 & Since this is all pairs and $a_1\neq a_2$\\
+        \hline
+        $\Rightarrow$ & $(w-y)(x-w)(x-y)(x-z)(y-z)$ is divisible by 3 & Since prod of div by 3 ints is still div by 3\\
+        \hline
+        $\Rightarrow$ & $3\mid (w-y)(x-w)(x-y)(x-z)(y-z)$ & By def of divisible by 3 \\
+        \hline
+	\end{tabular}
+\end{flushleft}\vspace{20pt}
+
+
+\pagebreak
+
+\section{Problem 2}
+
+a) Let $n$ be any positive integer, let $A_n=\{1,2,....,n\}$ and let $f_n\vcentcolon\mathcal{P}(A_n)\rightarrow\{0,1\}^n$ be defined by $f_n(A)=b_1b_2...b_n$ where
+\begin{equation}
+b_i=
+    \begin{cases}
+        1 & \text{if } i\in A \\
+        0 & \text{if } \text{otherwise}
+    \end{cases}
+\end{equation}
+
+
+
+\begin{table}[h!]
+\hspace{2.5em}\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|l|}{$n=1$ \qquad\qquad $A_1 = \{1\}$} \\
+\hline
+$f_1(\emptyset) = 0$ & $f_1(\{1\}) = 1$ & \multicolumn{2}{l|}{} \\
+\hline
+\multicolumn{4}{|l|}{$n=2$ \qquad\qquad $A_2 = \{1, 2\}$} \\
+\hline
+$f_2(\emptyset) = 00$ & $f_2(\{1\}) = 10$ & $f_2(\{2\}) = 01$ & $f_2(\{1, 2\}) = 11$ \\
+\hline
+\multicolumn{4}{|l|}{$n=3$ \qquad\qquad $A_3 = \{1, 2, 3\}$} \\
+\hline
+$f_3(\emptyset) = 000$ & $f_3(\{1\}) = 100$ & $f_3(\{2\}) = 010$ & $f_3(\{1, 2\}) = 110$ \\
+$f_3(\{3\}) = 001$ & $f_3(\{1, 3\}) = 101$ & $f_3(\{2, 3\}) = 011$ & $f_3(\{1, 2, 3\}) = 111$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+b) \textbf{Prove:} $f_n\vcentcolon\mathcal{P}(A_n)\rightarrow\{0,1\}^n$ is onto, for any positive integer $n$.\vspace{5pt}
+
+Formal definition: $\forall b\in B\;\exists a\in A\vcentcolon f(a)=b$.\vspace{2pt}
+
+To prove $f$, WTS $\forall b\in B\;\exists a\in A\vcentcolon f(a)=b\equiv$ if $b\in B$ then $\exists a\in A\vcentcolon f(a)=b$.\vspace{10pt}
+
+\textbf{Proof:} 
+\begin{flushleft}
+    \begin{tabular}{|p{1.5cm}|p{5.6cm}|p{6cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        Suppose & $B\in \{0,1\}^n$ & By assumption \\
+        \hline
+        $\Rightarrow$ & $b_1b_2...b_i\in\{0,1\}$ & By def of n \\
+        \hline
+        $\Rightarrow$ & $b=b_1b_2...b_n$ & By def of $b_i$ \\
+        \hline
+        $\Rightarrow$ & $A=\{i\in A_n\mid b_i=1\}$ & Def of $b_i$ and $A$\\
+        \hline
+        $\Rightarrow$ & $f_n(A)=b'=b'_1b'_2..b'_n$ & By def of $f$ and $b'_n$ \\
+        \hline
+        $\Rightarrow$ & $f_n(A)=b_1b_2...b_n$ & Since $b'_i=1$ iff $i\in A$ iff $b_i=1$ \\
+        \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+c) The ChatGPT proof is a direct proof since it assumed that $A$ and $B$ are distinct sets meaning $A\neq B$ and shows that $f(A)\neq f(B)$.  Which is a direct proof.\vspace{10pt}
+\pagebreak
+
+d) A proof by contrapositive: Suppose $a_1a_2\in A$ and $f(a_1)=f(a_2)$, WTS $a_1=a_2$
+
+\textbf{Proof:}
+\begin{flushleft}
+    \begin{tabular}{|p{1.5cm}|p{5.6cm}|p{6cm}|}
+         \hline
+         & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+         \hline
+         \textbf{Suppose} & if $f_n(A)=f_n(B)$ & By assumption \\
+         \hline
+         \textbf{WTS} & $A=B$ & \\
+         \hline
+         $\Rightarrow$ & $b_1b_2...b_n=b'_1b'_2...b'_n$ & By def of $f_n$ \\
+         \hline
+         $\Rightarrow$ & WLOG $A=\{i\in A_n\mid b_i=1\}$ & By def of $b_i$ and $A$ \\
+         \hline
+         $\Rightarrow$ & $b_1b_2...b_n=b'_1b'_2...b'_n$ & Since $b'_i=1$ iff $i\in A$ iff $b_i=1$ defined by $f_n$, since $f_n(A)=f_n(B)$\\
+         \hline
+         $\Rightarrow$ & $b_1b_2...b_n=b_1b_2...b_n$ & Since $b'_i=b_i$ iff $i\in A$ \\
+         \hline
+         $\Rightarrow$ & $A=B$ & By substitution \\
+         \hline
+    \end{tabular}
+\end{flushleft}
+
+
+\pagebreak
+
+
+\section{Problem 3}
+
+\textbf{Claim:} Let $n,k$ be positive integers such that $k<2^n$ and let $S$ be a set of $n$ integers, e.g. $S\subseteq \mathbb{Z}$ and $|S|=n$. Then there are distinct $U,V\subseteq S$ such that
+\begin{equation}
+    \left[\sum_{x\in U}^{}x\right]\text{mod } k = \left[\sum_{x\in V}^{}x\right]\text{mod } k
+\end{equation}\vspace{10pt}
+
+\textbf{Pigeons:} Let the pigeons $(A)$ be possible subsets of $S$\vspace{2pt}
+
+\textbf{Pigeonholes:} Let the pigeonholes $(B)$ be $\left[\sum_{x\in U}^{}x\right]\text{mod } k$
+
+\textbf{Function:} Thus $f(U)\vcentcolon=\left[\sum_{x\in U}x\right]\bmod k$ such that there exist distinct subsets $U$ and $V$ in $S$ such that $f(U)=f(V)$
+
+
+\begin{flushleft}
+    \begin{tabular}{|p{0.5cm}|p{5.6cm}|p{6cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        $\Rightarrow$ & $|A|=2^n$ & By def of \(A\) and claim \\
+        \hline
+        $\Rightarrow$ & $|B|=k$ & By def of \(B\) since it represents the number of possible remainders of the summation \(\text{mod } k\) \\
+        \hline
+        $\Rightarrow$ & $|A|>|B|$ & Since \(k<2^n\) \\
+        \hline
+        $\Rightarrow$ & $\exists a_1,a_2\in A\colon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ & By def of the Pigeonhole Principle \\
+        \hline
+        $\Rightarrow$ & $\exists U, V\subseteq S\vcentcolon[(U\neq V)\land(\sum_{x\in U}^{}x\text{ mod } k = \sum_{x\in V}^{}x\text{ mod } k)]$ & By def of \(f\), \(a_1\) being $U$, and \(a_2\) being $V$ as subsets of \(S\) \\
+        \hline
+    \end{tabular}
+\end{flushleft}\vspace{20pt}
+
+
+\end{document}
+
+\documentclass{article}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\title{Problem Set 5}
+\author{Parvesh Adi Lachman}
+\date{October 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+
+
+a) \textbf{Claim:} $\forall w,x,y,z\in\mathbb{Z}\vcentcolon  3\mid (w-y)(w-z)(x-w)(x-y)(x-z)(y-z)$ \vspace{10pt}
+
+
+\textbf{Proof:}\vspace{5pt}
+
+\begin{itemize}
+	\item Let the pigeons $(A)$ be the set $\{x,y,z,w\}$ where $x,y,z,w\in\mathbb{Z}$;
+	\item Let the pigeonholes $(B)$ be the set $\{3\mid\;, 3\nmid\}$;
+	\item Let $f\vcentcolon A\rightarrow B$ be defined $f(a)\vcentcolon = $ Note that $f$ is a well defined function:
+		\begin{enumerate}
+			\item for any pigeon $a\in \{x,y,z,w\}$, $f(a)=..$ is computable because ...,
+			\item for any pigeon $a\in \{x,y,z,w\}$, if $..=b$ and $...=c$ then $b=c$, ,
+			\item for any pigeon $a\in \{x,y,z,w\}$,
+		\end{enumerate}
+
+\end{itemize}
+
+\begin{flushleft} 
+	\begin{tabular}{|p{1.3cm}|p{3.4cm}|p{5.8cm}|}
+	\hline
+\documentclass{article}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\title{Problem Set 5}
+\author{Parvesh Adi Lachman}
+\date{October 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+
+
+a) \textbf{Claim:} $\forall w,x,y,z\in\mathbb{Z}\vcentcolon  3\mid (w-y)(w-z)(x-w)(x-y)(x-z)(y-z)$ \vspace{10pt}
+
+
+\textbf{Proof:}\vspace{5pt}
+
+\begin{itemize}
+	\item Let the pigeons $(A)$ be the set $\{x,y,z,w\}$ where $x,y,z,w\in\mathbb{Z}$;
+	\item Let the pigeonholes $(B)$ be the set $\{0,1,2\}$;
+	\item Let $f\vcentcolon A\rightarrow B$ be defined $f(a)\vcentcolon = remainderDivBy3(a)$. Note that $f$ is a well defined function:
+		\begin{enumerate}
+			\item for any pigeon $a\in \{x,y,z,w\}$, $f(a)=remainderDivBy3(a)$ is computable because $a\div 3$ is defined,
+			\item for any pigeon $a\in \{x,y,z,w\}$, if $remainderDivBy3(a)=b$ and $remainderDivBy3(a)=c$ then $b=c$, ,
+			\item for any pigeon $a\in \{x,y,z,w\}$, $remainderDivBy3(a)$ is within the codomain $\{0,1,2\}$ by def of divisible by 3
+		\end{enumerate}
+
+\end{itemize}
+
+\begin{flushleft} 
+	\begin{tabular}{|p{0.5cm}|p{5.6cm}|p{6cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        $\Rightarrow$ & $|A| = 4$ & Because $A=\{x,y,z,w\}$ \\
+        \hline
+        $\Rightarrow$ & $|B| = 3$ & Because $B=\{0,1,2\}$ \\
+        \hline
+        $\Rightarrow$ & $|A|>|B|$ & Since $4>3$ \\ 
+        \hline
+        $\Rightarrow$ & $\exists a_1,a_2\in A\vcentcolon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ (i.e. pigeons $a_1\neq a_2$ with same pigeonhole) & By def of pigeonhole principle \\
+        \hline
+        $\Rightarrow$ & $a_1,a_2\in{x,y,z,w}\land(a_1\neq a_2)\land(remainderDivBy3(a_1)=remainderDivBy3(a_2))$ & By def of $A$ and $f$ \\
+        \hline
+        $\Rightarrow$ & $3\mid (a_1-a_2)$ and $3\mid (a_2-a_1)$ & Since difference of two ints of the same function is also divisible by 3, and by def of equivalence class\\
+        \hline
+        $\Rightarrow$ & at least one of $(w-y),(w-z),(x-w),(x-y),(x-z),(y-z)$ is divisible by 3 & Since this is all pairs and $a_1\neq a_2$\\
+        \hline
+        $\Rightarrow$ & $(w-y)(w-z)(x-w)(x-y)(x-z)(y-z)$ is divisible by 3 & Since prod of div by 3 ints is still div by 3\\
+        \hline
+        $\Rightarrow$ & $3\mid (w-y)(w-z)(x-w)(x-y)(x-z)(y-z)$ & By def of divisible by 3 \\
+        \hline
+	\end{tabular}
+\end{flushleft}\vspace{10pt}
+
+
+b)  The claim would hold true.  Let us remove $(w-z)$.\vspace{10pt}
+
+\textbf{Proof:}
+\begin{flushleft} 
+	\begin{tabular}{|p{0.5cm}|p{5.6cm}|p{6cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        $\Rightarrow$ & $|A| = 4$ & Because $A=\{x,y,z,w\}$ \\
+        \hline
+        $\Rightarrow$ & $|B| = 3$ & Because $B=\{0,1,2\}$ \\
+        \hline
+        $\Rightarrow$ & $|A|>|B|$ & Since $4>3$ \\ 
+        \hline
+        $\Rightarrow$ & $\exists a_1,a_2\in A\vcentcolon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ (i.e. pigeons $a_1\neq a_2$ with same pigeonhole) & By def of pigeonhole principle \\
+        \hline
+        $\Rightarrow$ & $a_1,a_2\in{x,y,z,w}\land(a_1\neq a_2)\land(remainderDivBy3(a_1)=remainderDivBy3(a_2))$ & By def of $A$ and $f$ \\
+        \hline
+        $\Rightarrow$ & $3\mid (a_1-a_2)$ and $3\mid (a_2-a_1)$ & Since difference of two ints of the same function is also divisible by 3, and by def of equivalence class\\
+        \hline
+        $\Rightarrow$ & at least one of $(w-y),(x-w),(x-y),(x-z),(y-z)$ is divisible by 3 & Since this is all pairs and $a_1\neq a_2$\\
+        \hline
+        $\Rightarrow$ & $(w-y)(x-w)(x-y)(x-z)(y-z)$ is divisible by 3 & Since prod of div by 3 ints is still div by 3\\
+        \hline
+        $\Rightarrow$ & $3\mid (w-y)(x-w)(x-y)(x-z)(y-z)$ & By def of divisible by 3 \\
+        \hline
+	\end{tabular}
+\end{flushleft}\vspace{20pt}
+
+
+\pagebreak
+
+\section{Problem 2}
+
+a) Let $n$ be any positive integer, let $A_n=\{1,2,....,n\}$ and let $f_n\vcentcolon\mathcal{P}(A_n)\rightarrow\{0,1\}^n$ be defined by $f_n(A)=b_1b_2...b_n$ where
+\begin{equation}
+b_i=
+    \begin{cases}
+        1 & \text{if } i\in A \\
+        0 & \text{if } \text{otherwise}
+    \end{cases}
+\end{equation}
+
+
+
+\begin{table}[h!]
+\hspace{2.5em}\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|l|}{$n=1$ \qquad\qquad $A_1 = \{1\}$} \\
+\hline
+$f_1(\emptyset) = 0$ & $f_1(\{1\}) = 1$ & \multicolumn{2}{l|}{} \\
+\hline
+\multicolumn{4}{|l|}{$n=2$ \qquad\qquad $A_2 = \{1, 2\}$} \\
+\hline
+$f_2(\emptyset) = 00$ & $f_2(\{1\}) = 10$ & $f_2(\{2\}) = 01$ & $f_2(\{1, 2\}) = 11$ \\
+\hline
+\multicolumn{4}{|l|}{$n=3$ \qquad\qquad $A_3 = \{1, 2, 3\}$} \\
+\hline
+$f_3(\emptyset) = 000$ & $f_3(\{1\}) = 100$ & $f_3(\{2\}) = 010$ & $f_3(\{1, 2\}) = 110$ \\
+$f_3(\{3\}) = 001$ & $f_3(\{1, 3\}) = 101$ & $f_3(\{2, 3\}) = 011$ & $f_3(\{1, 2, 3\}) = 111$ \\
+\hline
+\end{tabular}
+\end{table}
+ a) Let $n$ be any positive integer, let $A_n=\{1,2,....,n\}$ and let $f_n\vcentcolon\mathcal{P}(A_n)\rightarrow\{0,1\}^n$ be defined by $f_n(A)=b_1b_2...b_n$ where   
+     ProblemSet5.synctex.gz   |356 \begin{equation}                                                                                                                                                      
+    ﭨ ProblemSet5.tex          |357 b_i=                                                                                                                                                                  
+~                              |358     \begin{cases}                                                                                                                                                     
+~                              |359         1 & \text{if } i\in A \\                                                                                                                                      
+~                              |360         0 & \text{if } \text{otherwise}                                                                                                                               
+~                              |361     \end{cases}                                                                                                                                                       
+~                              |362 \end{equation}    
+
+b) \textbf{Prove:} $f_n\vcentcolon\mathcal{P}(A_n)\rightarrow\{0,1\}^n$ is onto, for any positive integer $n$.\vspace{5pt}
+
+Formal definition: $\forall b\in B\;\exists a\in A\vcentcolon f(a)=b$.\vspace{2pt}
+
+To prove $f$, WTS $\forall b\in B\;\exists a\in A\vcentcolon f(a)=b\equiv$ if $b\in B$ then $\exists a\in A\vcentcolon f(a)=b$.\vspace{10pt}
+
+\textbf{Proof:} 
+\begin{flushleft}
+    \begin{tabular}{|p{1.5cm}|p{5.6cm}|p{6cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        Suppose & $B\in \{0,1\}^n$ & By assumption \\
+        \hline
+        $\Rightarrow$ & $b_1b_2...b_i\in\{0,1\}$ & By def of n \\
+        \hline
+        $\Rightarrow$ & $b=b_1b_2...b_n$ & By def of $b_i$ \\
+        \hline
+        $\Rightarrow$ & $A=\{i\in A_n\mid b_i=1\}$ & Def of $b_i$ and $A$\\
+        \hline
+        $\Rightarrow$ & $f_n(A)=b'=b'_1b'_2..b'_n$ & By def of $f$ and $b'_n$ \\
+        \hline
+        $\Rightarrow$ & $f_n(A)=b_1b_2...b_n$ & Since $b'_i=1$ iff $i\in A$ iff $b_i=1$ \\
+        \hline
+    \end{tabular}
+\end{flushleft}\vspace{10pt}
+
+c) The ChatGPT proof is a direct proof since it assumed that $A$ and $B$ are distinct sets meaning $A\neq B$ and shows that $f(A)\neq f(B)$.  Which is a direct proof.\vspace{10pt}
+\pagebreak
+
+d) A proof by contrapositive: Suppose $a_1a_2\in A$ and $f(a_1)=f(a_2)$, WTS $a_1=a_2$
+
+\textbf{Proof:}
+\begin{flushleft}
+    \begin{tabular}{|p{1.5cm}|p{5.6cm}|p{6cm}|}
+         \hline
+         & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+         \hline
+         \textbf{Suppose} & if $f_n(A)=f_n(B)$ & By assumption \\
+         \hline
+         \textbf{WTS} & $A=B$ & \\
+         \hline
+         $\Rightarrow$ & $b_1b_2...b_n=b'_1b'_2...b'_n$ & By def of $f_n$ \\
+         \hline
+         $\Rightarrow$ & WLOG $A=\{i\in A_n\mid b_i=1\}$ & By def of $b_i$ and $A$ \\
+         \hline
+         $\Rightarrow$ & $b_1b_2...b_n=b'_1b'_2...b'_n$ & Since $b'_i=1$ iff $i\in A$ iff $b_i=1$ defined by $f_n$, since $f_n(A)=f_n(B)$\\
+         \hline
+         $\Rightarrow$ & $b_1b_2...b_n=b_1b_2...b_n$ & Since $b'_i=b_i$ iff $i\in A$, and by def of $f_n$ \\
+         \hline
+         $\Rightarrow$ & $A=B$ & By substitution \\
+         \hline
+    \end{tabular}
+\end{flushleft}
+
+
+\pagebreak
+
+
+\section{Problem 3}
+
+\textbf{Claim:} Let $n,k$ be positive integers such that $k<2^n$ and let $S$ be a set of $n$ integers, e.g. $S\subseteq \mathbb{Z}$ and $|S|=n$. Then there are distinct $U,V\subseteq S$ such that
+\begin{equation}
+    \left[\sum_{x\in U}^{}x\right]\text{mod } k = \left[\sum_{x\in V}^{}x\right]\text{mod } k
+\end{equation}\vspace{10pt}
+
+\textbf{Pigeons:} Let the pigeons $(A)$ be possible subsets of $S$\vspace{2pt}
+
+\textbf{Pigeonholes:} Let the pigeonholes $(B)$ be $\left[\sum_{x\in U}^{}x\right]\text{mod } k$
+
+\textbf{Function:} Thus $f(U)\vcentcolon=\left[\sum_{x\in U}x\right]\bmod k$ such that there exist distinct subsets $U$ and $V$ in $S$ such that $f(U)=f(V)$
+
+
+\begin{flushleft}
+    \begin{tabular}{|p{0.5cm}|p{5.6cm}|p{6cm}|}
+        \hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+        $\Rightarrow$ & $|A|=2^n$ & By def of \(A\) and claim \\
+        \hline
+        $\Rightarrow$ & $|B|=k$ & By def of \(B\) since it represents the number of possible remainders of the summation \(\text{mod } k\) \\
+        \hline
+        $\Rightarrow$ & $|A|>|B|$ & Since \(k<2^n\) \\
+        \hline
+        $\Rightarrow$ & $\exists a_1,a_2\in A\colon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ & By def of the Pigeonhole Principle \\
+        \hline
+        $\Rightarrow$ & $\exists U, V\subseteq S\vcentcolon[(U\neq V)\land(\sum_{x\in U}^{}x\text{ mod } k = \sum_{x\in V}^{}x\text{ mod } k)]$ & By def of \(f\), \(a_1\) being $U$, and \(a_2\) being $V$ as subsets of \(S\) \\
+        \hline
+    \end{tabular}
+\end{flushleft}\vspace{20pt}
+
+
+\end{document}
+
+          & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+          \hline
+		$\Rightarrow$ & $|A| = 4$ & Because $A=\{x,y,z,w\}$ \\
+		\hline
+		$\Rightarrow$ & $|B| = 2$ & Because $B=\{3\mid,3\nmid\}$ \\
+		\hline
+		$\Rightarrow$ & $|A|>|B|$ & Since $4>2$ \\ 
+		\hline
+		$\Rightarrow$ & $\exists a_1,a_2\in A\vcentcolon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ (i.e. pigeons $a_1\neq a_2$ with same pigeonhole) & By def of pigeonhole principle \\
+		\hline
+
+	
+	\end{tabular}
+\end{flushleft}
+
+
+
+\pagebreak
+
+\section{Problem 2}
+
+\pagebreak
+
+
+\section{Problem 3}
+
+\end{document}
+
