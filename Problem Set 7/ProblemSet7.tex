@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{algpseudocode}
+
+\title{Problem Set 7}
+\author{Parvesh Adi Lachman}
+\date{November 2023}
+
+\begin{document}
+\maketitle
+\section{Problem 1}
+
+Consider the algorithm below, which takes an $n\geq 0$ and finds it remainder when divided by $c\geq 1$
+
+\vspace{15pt}
+\begin{algorithmic}
+\Function{Remainder}{$n$}:
+\If{$n\leq c-1$}
+\State \Return $n$
+\Else
+\State \Return Remainder($n-c$)
+\EndIf
+\EndFunction
+\end{algorithmic}
+
+\vspace{10pt}
+
+\textbf{Claim:} Let $c\geq 1$. For any $n\geq 0$, $\textbf{remainder($n$)}=n\mod c$.
+
+
+
+
+\pagebreak
+
+\section{Problem 2}
+
+\textbf{Claim:} Let $n,c\geq 1$ and $c\leq n$. The number of simple paths of length $c$ in the complete graph on $n$ nodes is $\frac{n!}{(n-c-1)!}$ which is equal to $n(n-1)\cdots (n-c)$.
+
+\vspace{10pt}
+
+\textbf{complete graph} $K_n$: an undirected graph on $n$ nodes with an edge between every pair of nodes.
+\vspace{5pt}
+
+\textbf{simple path:} a sequence of distinct nodes with edges between consecutive nodes in the sequence.
+\vspace{5pt}
+
+\textbf{length of a path:} the number of \textit{edges} in the path (\textbf{not} number of nodes).
+\vspace{5pt}
+
+\textbf{Proof:} Let $G$ be a complete graph on $n$ nodes. Let $v_1,v_2,\ldots,v_n$ be the nodes of $G$. Let $P$ be a simple path of length $c$ in $G$. Then $P$ is a sequence of $c$ distinct nodes in $G$. Since $P$ is a simple path, the nodes in $P$ are distinct. Thus, $P$ is a permutation of $c$ distinct nodes in $G$. Since $G$ has $n$ nodes, there are $n$ choices for the first node in $P$, $n-1$ choices for the second node in $P$, and so on. Thus, there are $n(n-1)\cdots (n-c)$ simple paths of length $c$ in $G$.
+
+
+
+
+
+\end{document}
+
