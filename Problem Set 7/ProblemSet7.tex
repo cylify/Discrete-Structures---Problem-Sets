@@ -4,6 +4,9 @@
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{algpseudocode}
+\usepackage{changepage}
+
+
 
 \title{Problem Set 7}
 \author{Parvesh Adi Lachman}
@@ -16,6 +19,7 @@
 Consider the algorithm below, which takes an $n\geq 0$ and finds it remainder when divided by $c\geq 1$
 
 \vspace{15pt}
+
 \begin{algorithmic}
 \Function{Remainder}{$n$}:
 \If{$n\leq c-1$}
@@ -28,12 +32,62 @@ Consider the algorithm below, which takes an $n\geq 0$ and finds it remainder wh
 
 \vspace{10pt}
 
-\textbf{Claim:} Let $c\geq 1$. For any $n\geq 0$, $\textbf{remainder($n$)}=n\mod c$.
+
+\noindent\textbf{Claim:} Let $c\geq 1$. For any $n\geq 0$, $\textbf{remainder($n$)}=n\mod c$.
+\vspace{10pt}
 
 
+\textbf{Step 0:} For $n\geq 0$, we want to show that $\textbf{remainder($n$)}=n\mod c$. 
+\vspace{15pt}
 
+\textbf{Step 1:} For any $n\geq 0$, Let $P(n)$ be the property that $\textbf{remainder($n$)}=n\mod c$.
+\vspace{15pt}
+
+\textbf{Step 2:} As base cases, consider when\vspace{10pt}
+
+
+$n=0$. We will show that $P(0)$ is true: that is $\textbf{remainder($0$)}=0\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($0$)}=0$, so RHS = 0. Also, $0\mod c=0$, so LHS = 0. Thus, LHS = RHS, so $P(0)$ is true.
+\vspace{10pt}
+
+$n=1$. We will show that $P(1)$ is true: that is $\textbf{remainder($1$)}=1\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($1$)}=1$, so RHS = 1. Also, $1\mod c=1$, so LHS = 1. Thus, LHS = RHS, so $P(1)$ is true.
+
+
+\vspace{15pt}
+\pagebreak
+\textbf{Step 3:} Let $k\geq 2$. For the induction hypothesis, suppose that $P(0),P(1),\ldots,P(k)$ are true, or equivalently, that for all $0\leq k'\leq k\vcentcolon P(k')$. That is, suppose that $\textbf{remainder($k'$)}=k'\mod c$.
+\vspace{15pt}
+
+\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(0),P(1),\ldots,P(k)$ are true. That is, we prove that $\textbf{remainder($k+1$)}=(k+1)\mod c$.
+\vspace{15pt}
+
+\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(0),P(1),\ldots,P(k)$ are true) is as follows:
+\vspace{5pt}
+
+
+\begin{adjustwidth}{-1cm}{}
+\noindent
+\hspace{-3cm}
+\begin{sloppypar}
+	\begin{tabular}{l l l l}
+		Left hand side of $P(k+1)$ & = & $\textbf{remainder($k+1$)}$ & \\
+							  & = & $\textbf{remainder(($k+1)-c$)}$ & By def of algorithm, since $k+1\geq c-1$ \\
+							  & = & $((k+1)-c)\mod c$ & By IH, since $0\leq (k+1)-c\leq k$ \\
+							  & = & $(k+1)\mod c-c\mod c$ & By def of mod \\
+							  & = & $(k+1)\mod c$ & Since $c\geq 1$, $c\mod c=0$ \\
+							  & = & Right hand side of $P(k+1)$ & \\
+	\end{tabular}
+\end{sloppypar}
+\end{adjustwidth}
+\vspace{15pt}
+
+\textbf{Step 6:} The steps above have shown that for any $k\geq 2$, if $P(0),P(1),\ldots,P(k)$ are true, then $P(k+1)$ is also true. Combined with the base cases, which show that $P(0)$ and $P(1)$ are true, we have shown that for all $n\geq 0$, $P(n)$ is true, as desired.
 
 \pagebreak
+
+
+
+
+
 
 \section{Problem 2}
 
@@ -50,9 +104,40 @@ Consider the algorithm below, which takes an $n\geq 0$ and finds it remainder wh
 \textbf{length of a path:} the number of \textit{edges} in the path (\textbf{not} number of nodes).
 \vspace{5pt}
 
-\textbf{Proof:} Let $G$ be a complete graph on $n$ nodes. Let $v_1,v_2,\ldots,v_n$ be the nodes of $G$. Let $P$ be a simple path of length $c$ in $G$. Then $P$ is a sequence of $c$ distinct nodes in $G$. Since $P$ is a simple path, the nodes in $P$ are distinct. Thus, $P$ is a permutation of $c$ distinct nodes in $G$. Since $G$ has $n$ nodes, there are $n$ choices for the first node in $P$, $n-1$ choices for the second node in $P$, and so on. Thus, there are $n(n-1)\cdots (n-c)$ simple paths of length $c$ in $G$.
+
+%\textbf{Step 0:} For all $n,c\geq 1$, we want to show that the number of simple paths of length $c$ in the complete graph on $n$ nodes is $\frac{n!}{(n-c-1)!}$ which is equal to $n(n-1)\cdots (n-c)$.
+\vspace{15pt}
+
+%\textbf{Step 1:} For any $n,c\geq 1$, Let $P(n,c)$ be the property that the number of simple paths of length $c$ in the complete graph on $n$ nodes is $\frac{n!}{(n-c-1)!}$ which is equal to $n(n-1)\cdots (n-c)$.
+
+\vspace{5pt}
+%We want to show that $P(n,c)$ is true for all $n,c\geq 1$.
+
+\vspace{15pt}
+
+%\textbf{Step 2:} As base cases, consider when
 
 
+
+%\textbf{Step 3:} For the induction hypothesis, suppose (hypothetically) that $P(k)$ were true for some fixed $k\geq 1$. That is, suppose that $\frac{k!}{(k-c-1)!}=k(k-1)\cdots (k-c)$.
+\vspace{15pt}
+
+%\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(k)$ is true. That is, we prove that $\frac{(k+1)!}{((k+1)-c-1)!}=\prod_{i=1}^{k}$.
+\vspace{15pt}
+
+%\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is as follows:
+
+\begin{adjustwidth}{-1cm}{}
+	\begin{sloppypar}
+		\begin{tabular}{l l l l}
+			%Left hand side of $P(k+1)$ & = & $\frac{(k+1)!}{((k+1)-c-1)!}$ & \\
+									   
+		\end{tabular}
+	\end{sloppypar}
+	
+
+
+\end{adjustwidth}
 
 \pagebreak
 
