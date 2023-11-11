@@ -41,6 +41,11 @@ Consider the algorithm below, which takes an $n\geq 0$ and finds it remainder wh
 \vspace{15pt}
 
 \textbf{Step 1:} For any $n\geq 0$, Let $P(n)$ be the property that $\textbf{remainder($n$)}=n\mod c$.
+
+\vspace{5pt}
+We want to show that $P(n)$ is true for all $n\geq 0$.
+
+
 \vspace{15pt}
 
 \textbf{Step 2:} As base cases, consider when\vspace{10pt}
@@ -49,22 +54,21 @@ Consider the algorithm below, which takes an $n\geq 0$ and finds it remainder wh
 $n=0$. We will show that $P(0)$ is true: that is $\textbf{remainder($0$)}=0\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, and in this case $n=0$, $c\geq1$. This implies $0\leq 1-1=0\leq0$ which is true, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($0$)}=0$, so RHS = 0. Also, $0\mod c=0$, so LHS = 0. Thus, LHS = RHS, so $P(0)$ is true.
 \vspace{10pt}
 
-$n=1$. We will show that $P(1)$ is true: that is $\textbf{remainder($1$)}=1\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($1$)}=1$, so RHS = 1. Also, $1\mod c=1$, so LHS = 1. Thus, LHS = RHS, so $P(1)$ is true.
-
 
 \vspace{15pt}
 \pagebreak
-\textbf{Step 3:} Let $k\geq 2$. For the induction hypothesis, suppose that $P(0),P(1),\ldots,P(k)$ are true, or equivalently, that for all $0\leq k'\leq k\vcentcolon P(k')$. That is, suppose that $\textbf{remainder($k'$)}=k'\mod c$.
+\textbf{Step 3:} Let $k\geq 1$. For the induction hypothesis, suppose that $P(0),\ldots,P(k)$ are true, or equivalently, that for all $0\leq k'\leq k\vcentcolon P(k')$. That is, suppose that $\textbf{remainder($k'$)}=k'\mod c$.
 \vspace{15pt}
 
-\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(0),P(1),\ldots,P(k)$ are true. That is, we prove that $\textbf{remainder($k+1$)}=(k+1)\mod c$.
+\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(0),\ldots,P(k)$ are true. That is, we prove that $\textbf{remainder($k+1$)}=(k+1)\mod c$.
 \vspace{15pt}
 
-\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(0),P(1),\ldots,P(k)$ are true) is as follows:
+\textbf{Step 5:} If $k + 1 < c$, then $\textbf{remainder($k + 1$)}=k+1=k+1\mod c$ by definition of algorithm. Otherwise the proof that $P(k+1)$ is true (given that $P(0),\ldots,P(k)$ are true) is as follows:
 \vspace{5pt}
 
 
-\begin{adjustwidth}{-1cm}{}
+
+\begin{adjustwidth}{-1.5cm}{}
 \noindent
 \hspace{-3cm}
 \begin{sloppypar}
@@ -80,12 +84,9 @@ $n=1$. We will show that $P(1)$ is true: that is $\textbf{remainder($1$)}=1\mod 
 \end{adjustwidth}
 \vspace{15pt}
 
-\textbf{Step 6:} The steps above have shown that for any $k\geq 2$, if $P(0),P(1),\ldots,P(k)$ are true, then $P(k+1)$ is also true. Combined with the base cases, which show that $P(0)$ and $P(1)$ are true, we have shown that for all $n\geq 0$, $P(n)$ is true, as desired.
+\textbf{Step 6:} The steps above have shown that for any $k\geq 2$, if $P(0),\ldots,P(k)$ are true, then $P(k+1)$ is also true. Combined with the base cases, which show that $P(0)$ are true, we have shown that for all $n\geq 0$, $P(n)$ is true, as desired.
 
 \pagebreak
-
-
-
 
 
 
@@ -105,39 +106,8 @@ $n=1$. We will show that $P(1)$ is true: that is $\textbf{remainder($1$)}=1\mod 
 \vspace{5pt}
 
 
-%\textbf{Step 0:} For all $n,c\geq 1$, we want to show that the number of simple paths of length $c$ in the complete graph on $n$ nodes is $\frac{n!}{(n-c-1)!}$ which is equal to $n(n-1)\cdots (n-c)$.
-\vspace{15pt}
+\textbf{Step 0:}
 
-%\textbf{Step 1:} For any $n,c\geq 1$, Let $P(n,c)$ be the property that the number of simple paths of length $c$ in the complete graph on $n$ nodes is $\frac{n!}{(n-c-1)!}$ which is equal to $n(n-1)\cdots (n-c)$.
-
-\vspace{5pt}
-%We want to show that $P(n,c)$ is true for all $n,c\geq 1$.
-
-\vspace{15pt}
-
-%\textbf{Step 2:} As base cases, consider when
-
-
-
-%\textbf{Step 3:} For the induction hypothesis, suppose (hypothetically) that $P(k)$ were true for some fixed $k\geq 1$. That is, suppose that $\frac{k!}{(k-c-1)!}=k(k-1)\cdots (k-c)$.
-\vspace{15pt}
-
-%\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(k)$ is true. That is, we prove that $\frac{(k+1)!}{((k+1)-c-1)!}=\prod_{i=1}^{k}$.
-\vspace{15pt}
-
-%\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is as follows:
-
-\begin{adjustwidth}{-1cm}{}
-	\begin{sloppypar}
-		\begin{tabular}{l l l l}
-			%Left hand side of $P(k+1)$ & = & $\frac{(k+1)!}{((k+1)-c-1)!}$ & \\
-									   
-		\end{tabular}
-	\end{sloppypar}
-	
-
-
-\end{adjustwidth}
 
 \pagebreak
 
@@ -154,7 +124,7 @@ Recall the Fibonacci numbers, as defined by:
 \end{center}
 \vspace{10pt}
 
-Recall the Sharp numbers from PS6, as defined by:
+\noindent Recall the Sharp numbers from PS6, as defined by:
 \begin{center}
     \begin{minipage}{0.5\textwidth} % Adjust the width as needed
         \raggedright % Align text to the left
@@ -163,11 +133,65 @@ Recall the Sharp numbers from PS6, as defined by:
 		$s_n=s_{n-1}+s_{n-2}$ for $n\geq 3$
     \end{minipage}
 \end{center}
-\vspace{10pt}
+\vspace{15pt}
 
-\textbf{Claim:} For all $n\geq 3$, $s_n=4\cdot f_{n-1}+2\cdot f_{n-2}$.
+\noindent\textbf{Claim:} For all $n\geq 3$, $s_n=4\cdot f_{n-1}+2\cdot f_{n-2}$.
 
-\vspace{10pt}
+\vspace{15pt}
+
+\noindent\textbf{Step 0:} For $n\geq 3$, we want to show that $s_n=4\cdot f_{n-1}+2\cdot f_{n-2}$.
+\vspace{15pt}
+
+\noindent\textbf{Step 1:} For any $n\geq 3$, Let $P(n)$ be the property that $s_n=4\cdot f_{n-1}+2\cdot f_{n-2}$.
+\vspace{5pt}
+We want to show that $P(n)$ is true for all $n\geq 3$.
+
+\vspace{15pt}
+
+\noindent\textbf{Step 2:} As base cases, consider when\vspace{10pt}
+
+$n=3$. We will show that $P(3)$ is true: that is $s_3=4\cdot f_{3-1}+2\cdot f_{3-2}$. Fortunately, this is true since $s_3=s_2+s_1=4+2=6$ and $4\cdot f_{3-1}+2\cdot f_{3-2}=4\cdot f_2+2\cdot f_1=4\cdot 1+2\cdot 1=6$. Thus, $s_3=4\cdot f_{3-1}+2\cdot f_{3-2}$, so LHS = RHS. Thus, $P(3)$ is true.
+
+\vspace{5pt}
+%$n=4$. We will show that $P(4)$ is true: that is $s_4=4\cdot f_{4-1}+2\cdot f_{4-2}$. Fortunately, this is true since $s_4=s_3+s_2=6+4=10$ and $4\cdot f_{4-1}+2\cdot f_{4-2}=4\cdot f_3+2\cdot f_2=4\cdot 2+2\cdot 1=10$. Thus, $s_4=4\cdot f_{4-1}+2\cdot f_{4-2}$, so LHS = RHS. Thus, $P(4)$ is true.
+
+
+\vspace{15pt}
+
+
+\noindent\textbf{Step 3:} Let $k\geq 3$. For the induction hypothesis, suppose that $P(3),\ldots,P(k)$ are true, or equivalently, that for all $3\leq k'\leq k\vcentcolon P(k')$. That is, suppose that $s_{k'}=4\cdot f_{k'-1}+2\cdot f_{k'-2}$.
+\vspace{15pt}
+
+\noindent\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(3),\ldots,P(k)$ are true. That is, we prove that $s_{k+1}=4\cdot f_{k+1-1}+2\cdot f_{k+1-2}$.
+
+\vspace{15pt}
+
+
+\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(3),\ldots,P(k)$ are true) is as follows:
+\vspace{5pt}
+
+\begin{adjustwidth}{-1.5cm}{}
+\noindent
+\hspace{-3cm}
+\begin{sloppypar}
+	\begin{tabular}{l l l l}
+		Left hand side of $P(k+1)$ & = & $s_{k+1}$ & \\
+								   & = & $s_{k}+s_{k-1}$ & By def of sequence \\
+								   &  & & (Sharp numbers)\\
+								   & = & $(4\cdot f_{k-1}+2\cdot f_{k-2})+(4\cdot f_{k-2}+2\cdot f_{k-3})$ & By IH \\
+								   & = & $4\cdot f_{k-1}+2\cdot f_{k-2}+4\cdot f_{k-2}+2\cdot f_{k-3}$ & By algebra\\
+								   & = & $4\cdot f_{k-1}+4\cdot f_{k-2}+2\cdot f_{k-2}+2\cdot f_{k-3}$ & By rewriting \\
+								   & = & $4(f_{k-1}+f_{k-2}) + 2(f_{k-2}+f_{k-3})$ & By factoring and algebra \\
+								   & = & $4\cdot f_{k} + 2\cdot f_{k-1}$ & By def of sequence \\
+								   &   & & (Fibonacci numbers)\\
+								   & = & Right hand side of $P(k+1)$ & \\
+								   
+	\end{tabular}
+\end{sloppypar}
+\end{adjustwidth}
+\vspace{15pt}
+
+
 
 
 

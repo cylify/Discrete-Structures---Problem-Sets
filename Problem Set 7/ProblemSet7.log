@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.18)  10 NOV 2023 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.18)  11 NOV 2023 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -251,34 +251,34 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (28.8693pt too wide) in paragraph at lines 57--59
-[]\OT1/cmr/bx/n/10 Step 3: \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 2$. For the in-duc-tion hy-poth-e-sis, sup-pose that $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (0)\OML/cmm/m/it/10 ; P\OT1/cmr/m/n/10 (1)\OML/cmm/m/it/10 ; [] ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )$
+Overfull \hbox (3.83803pt too wide) in paragraph at lines 60--62
+[]\OT1/cmr/bx/n/10 Step 3: \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 1$. For the in-duc-tion hy-poth-e-sis, sup-pose that $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (0)\OML/cmm/m/it/10 ; [] ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (109.44458pt too wide) in paragraph at lines 71--79
+Overfull \hbox (95.2182pt too wide) in paragraph at lines 75--83
 [][] 
  []
 
-
-Overfull \hbox (8.35066pt too wide) in paragraph at lines 83--84
-[]\OT1/cmr/bx/n/10 Step 6: \OT1/cmr/m/n/10 The steps above have shown that for any $\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 2$, if $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (0)\OML/cmm/m/it/10 ; P\OT1/cmr/m/n/10 (1)\OML/cmm/m/it/10 ; [] ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )$
+[2] [3]
+Overfull \hbox (88.97044pt too wide) in paragraph at lines 177--190
+[][] 
  []
 
-[2] [3] [4] (./ProblemSet7.aux) ) 
+[4] [5] (./ProblemSet7.aux) ) 
 Here is how much of TeX's memory you used:
  4171 strings out of 476025
  65640 string characters out of 5790016
- 1858388 words of memory out of 5000000
+ 1861388 words of memory out of 5000000
  24574 multiletter control sequences out of 15000+600000
  521745 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,62p,438b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on ProblemSet7.pdf (4 pages, 134548 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on ProblemSet7.pdf (5 pages, 145834 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
