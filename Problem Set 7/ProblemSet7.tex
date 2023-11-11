@@ -46,7 +46,7 @@ Consider the algorithm below, which takes an $n\geq 0$ and finds it remainder wh
 \textbf{Step 2:} As base cases, consider when\vspace{10pt}
 
 
-$n=0$. We will show that $P(0)$ is true: that is $\textbf{remainder($0$)}=0\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($0$)}=0$, so RHS = 0. Also, $0\mod c=0$, so LHS = 0. Thus, LHS = RHS, so $P(0)$ is true.
+$n=0$. We will show that $P(0)$ is true: that is $\textbf{remainder($0$)}=0\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, and in this case $n=0$, $c\geq1$. This implies $0\leq 1-1=0\leq0$ which is true, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($0$)}=0$, so RHS = 0. Also, $0\mod c=0$, so LHS = 0. Thus, LHS = RHS, so $P(0)$ is true.
 \vspace{10pt}
 
 $n=1$. We will show that $P(1)$ is true: that is $\textbf{remainder($1$)}=1\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($1$)}=1$, so RHS = 1. Also, $1\mod c=1$, so LHS = 1. Thus, LHS = RHS, so $P(1)$ is true.
