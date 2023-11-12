@@ -54,6 +54,9 @@ We want to show that $P(n)$ is true for all $n\geq 0$.
 $n=0$. We will show that $P(0)$ is true: that is $\textbf{remainder($0$)}=0\mod c$. Fortunately, this is true since $c\geq 1$ and in the algorithm, if $n\leq c-1$, and in this case $n=0$, $c\geq1$. This implies $0\leq 1-1=0\leq0$ which is true, then $\textbf{remainder($n$)}=n$. Thus, $\textbf{remainder($0$)}=0$, so RHS = 0. Also, $0\mod c=0$, so LHS = 0. Thus, LHS = RHS, so $P(0)$ is true.
 \vspace{10pt}
 
+Additionally, for any $n\leq c-1$, $\textbf{remainder($n$)}=n=(n\mod c)$, this is true since due to the definition of the algorithm. 
+
+
 
 \vspace{15pt}
 \pagebreak
@@ -84,7 +87,7 @@ $n=0$. We will show that $P(0)$ is true: that is $\textbf{remainder($0$)}=0\mod 
 \end{adjustwidth}
 \vspace{15pt}
 
-\textbf{Step 6:} The steps above have shown that for any $k\geq 2$, if $P(0),\ldots,P(k)$ are true, then $P(k+1)$ is also true. Combined with the base cases, which show that $P(0)$ are true, we have shown that for all $n\geq 0$, $P(n)$ is true, as desired.
+\textbf{Step 6:} The steps above have shown that for any $k\geq 1$, if $P(0),\ldots,P(k)$ are true, then $P(k+1)$ is also true. Combined with the base cases, which show that $P(0)$ are true, we have shown that for all $n\geq 0$, $P(n)$ is true, as desired.
 
 \pagebreak
 
@@ -106,7 +109,17 @@ $n=0$. We will show that $P(0)$ is true: that is $\textbf{remainder($0$)}=0\mod 
 \vspace{5pt}
 
 
-\textbf{Step 0:}
+\textbf{Step 0:} For all $c\geq 1$, we want to show that the number of simple paths of length $c$ in the complete graph on $n$ nodes is $\frac{n!}{(n-c-1)!}$ which is equal to $n(n-1)\cdots (n-c)$.
+\vspace{15pt}
+
+\textbf{Step 1:} For any $c\geq 1$, Let $P(c)$ be the property that the number of simple paths of length $c$ in the complete graph on $n$ nodes is $\frac{n!}{(n-c-1)!}$ which is equal to $n(n-1)\cdots (n-c)$.
+\vspace{15pt}
+
+\textbf{Step 2:} As base cases, consider when $c=1$. We will show that $P(1)$ is true: that is the number of simple paths of length $1$ in the complete graph on $n$ nodes is $\frac{n!}{(n-1-1)!}$ which is equal to $n(n-1)$. Fortunately, this is true since the number of simple paths of length $1$ in the complete graph on $n$ nodes is $n(n-1)$, and $\frac{n!}{(n-1-1)!}=n!$, and $n!=n(n-1)$. Thus, the number of simple paths of length $1$ in the complete graph on $n$ nodes is $\frac{n!}{(n-1-1)!}$ which is equal to $n(n-1)$, so LHS = RHS. Thus, $P(1)$ is true.
+\vspace{15pt}
+
+
+\textbf{Step 3:} Let $k\geq 1$. For the induction hypothesis, suppose that $P(1),\ldots,P(k)$ are true, or equivalently, that for all $1\leq k'\leq k\vcentcolon P(k')$. That is, suppose that the number of simple paths of length $k'$ in the complete graph on $n$ nodes is $\frac{n!}{(n-k'-1)!}$ which is equal to $n(n-1)\cdots (n-k')$.
 
 
 \pagebreak
@@ -153,21 +166,21 @@ We want to show that $P(n)$ is true for all $n\geq 3$.
 $n=3$. We will show that $P(3)$ is true: that is $s_3=4\cdot f_{3-1}+2\cdot f_{3-2}$. Fortunately, this is true since $s_3=s_2+s_1=4+2=6$ and $4\cdot f_{3-1}+2\cdot f_{3-2}=4\cdot f_2+2\cdot f_1=4\cdot 1+2\cdot 1=6$. Thus, $s_3=4\cdot f_{3-1}+2\cdot f_{3-2}$, so LHS = RHS. Thus, $P(3)$ is true.
 
 \vspace{5pt}
-%$n=4$. We will show that $P(4)$ is true: that is $s_4=4\cdot f_{4-1}+2\cdot f_{4-2}$. Fortunately, this is true since $s_4=s_3+s_2=6+4=10$ and $4\cdot f_{4-1}+2\cdot f_{4-2}=4\cdot f_3+2\cdot f_2=4\cdot 2+2\cdot 1=10$. Thus, $s_4=4\cdot f_{4-1}+2\cdot f_{4-2}$, so LHS = RHS. Thus, $P(4)$ is true.
+$n=4$. We will show that $P(4)$ is true: that is $s_4=4\cdot f_{4-1}+2\cdot f_{4-2}$. Fortunately, this is true since $s_4=s_3+s_2=6+4=10$ and $4\cdot f_{4-1}+2\cdot f_{4-2}=4\cdot f_3+2\cdot f_2=4\cdot 2+2\cdot 1=10$. Thus, $s_4=4\cdot f_{4-1}+2\cdot f_{4-2}$, so LHS = RHS. Thus, $P(4)$ is true.
 
 
 \vspace{15pt}
 
 
-\noindent\textbf{Step 3:} Let $k\geq 3$. For the induction hypothesis, suppose that $P(3),\ldots,P(k)$ are true, or equivalently, that for all $3\leq k'\leq k\vcentcolon P(k')$. That is, suppose that $s_{k'}=4\cdot f_{k'-1}+2\cdot f_{k'-2}$.
+\noindent\textbf{Step 3:} Let $k\geq 4$. For the induction hypothesis, suppose that $P(3),P(4),\ldots,P(k)$ are true, or equivalently, that for all $3\leq k'\leq k\vcentcolon P(k')$. That is, suppose that $s_{k'}=4\cdot f_{k'-1}+2\cdot f_{k'-2}$.
 \vspace{15pt}
 
-\noindent\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(3),\ldots,P(k)$ are true. That is, we prove that $s_{k+1}=4\cdot f_{k+1-1}+2\cdot f_{k+1-2}$.
+\noindent\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(3),P(4),\ldots,P(k)$ are true. That is, we prove that $s_{k+1}=4\cdot f_{k+1-1}+2\cdot f_{k+1-2}$.
 
 \vspace{15pt}
 
 
-\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(3),\ldots,P(k)$ are true) is as follows:
+\noindent\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(3),P(4)\ldots,P(k)$ are true) is as follows:
 \vspace{5pt}
 
 \begin{adjustwidth}{-1.5cm}{}
