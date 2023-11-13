@@ -66,7 +66,7 @@ Additionally, for any $n\leq c-1$, $\textbf{remainder($n$)}=n=(n\mod c)$, this i
 \textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(0),\ldots,P(k)$ are true. That is, we prove that $\textbf{remainder($k+1$)}=(k+1)\mod c$.
 \vspace{15pt}
 
-\textbf{Step 5:} If $k + 1 < c$, then $\textbf{remainder($k + 1$)}=k+1=k+1\mod c$ by definition of algorithm. Otherwise the proof that $P(k+1)$ is true (given that $P(0),\ldots,P(k)$ are true) is as follows:
+\textbf{Step 5:} If $k + 1\leq c-1$, then $\textbf{remainder($k + 1$)}=k+1=(k+1\mod c)$ by definition of algorithm. Otherwise the proof that $P(k+1)$ is true (given that $P(0),\ldots,P(k)$ are true) is as follows:
 \vspace{5pt}
 
 
@@ -127,7 +127,7 @@ Additionally, for any $n\leq c-1$, $\textbf{remainder($n$)}=n=(n\mod c)$, this i
 \textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is as follows:\vspace{15pt}
 
 
-\begin{adjustwidth}{-1.5cm}{}
+\begin{adjustwidth}{-2cm}{}
 	\begin{sloppypar}
 		\begin{tabular}{l l l l}
 			Left hand side of $P(k+1)$ & = & The number of simple paths of length $k+1$ in $K_n$ & \\
@@ -135,7 +135,8 @@ Additionally, for any $n\leq c-1$, $\textbf{remainder($n$)}=n=(n\mod c)$, this i
 									   &  & & are $k+1$ nodes \\
 									   & & & in length $k$ path \\
 									   & = & $\frac{n!}{(n-k-1)!}\cdot (n-(k+1))$ & By IH \\
-									   & = & $\frac{n!}{(n-k-1)!}\cdot \frac{(n-k-1)!}{(n-(k+1)-1)!}$ & By algebra \\
+									   & = & $\frac{n!}{(n-k-1)!}\cdot(n-k-1)$ & By algebra \\
+									   & = & $\frac{n!}{n-k-2}$ & By def of factorial \\
 									   & = & $\frac{n!}{(n-(k+1)-1)!}$ & By algebra \\
 									   & = & Right hand side of $P(k+1)$ & \\
 		\end{tabular}
