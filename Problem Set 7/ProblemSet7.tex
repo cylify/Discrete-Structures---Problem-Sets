@@ -119,7 +119,32 @@ Additionally, for any $n\leq c-1$, $\textbf{remainder($n$)}=n=(n\mod c)$, this i
 \vspace{15pt}
 
 
-\textbf{Step 3:} Let $k\geq 1$. For the induction hypothesis, suppose that $P(1),\ldots,P(k)$ are true, or equivalently, that for all $1\leq k'\leq k\vcentcolon P(k')$. That is, suppose that the number of simple paths of length $k'$ in the complete graph on $n$ nodes is $\frac{n!}{(n-k'-1)!}$ which is equal to $n(n-1)\cdots (n-k')$.
+\textbf{Step 3:} For the induction hypothesis, suppose (hypothetically) that $P(k)$ is true for some fixed $k\geq 1$. That is, suppose that the number of simple paths of length $k$ in the complete graph on $n$ nodes is $\frac{n!}{(n-k-1)!}$ which is equal to $n(n-1)\cdots (n-k)$.\vspace{15pt}
+
+\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(k)$ is true. That is, we prove that the number of simple paths of length $k+1$ in the complete graph on $n$ nodes is $\frac{n!}{(n-(k+1)-1)!}$ which is equal to $n(n-1)\cdots (n-(k+1))$.\vspace{15pt}
+
+
+\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is as follows:\vspace{15pt}
+
+
+\begin{adjustwidth}{-1.5cm}{}
+	\begin{sloppypar}
+		\begin{tabular}{l l l l}
+			Left hand side of $P(k+1)$ & = & The number of simple paths of length $k+1$ in $K_n$ & \\
+									   & = & The number of simple paths of length $k$ in $K_n$ * $(n-(k+1))$ & Since there \\
+									   &  & & are $k+1$ nodes \\
+									   & & & in length $k$ path \\
+									   & = & $\frac{n!}{(n-k-1)!}\cdot (n-(k+1))$ & By IH \\
+									   & = & $\frac{n!}{(n-k-1)!}\cdot \frac{(n-k-1)!}{(n-(k+1)-1)!}$ & By algebra \\
+									   & = & $\frac{n!}{(n-(k+1)-1)!}$ & By algebra \\
+									   & = & Right hand side of $P(k+1)$ & \\
+		\end{tabular}
+	\end{sloppypar}
+\end{adjustwidth}
+\vspace{15pt}
+
+\textbf{Step 6:} The steps above have shown that if $P(k)$ is true, then $P(k+1)$ is also true. Combined with the base case, which shows that $P(1)$ is true, we have shown that for all $c\geq 1$, $P(c)$ is true, as desired.
+
 
 
 \pagebreak
@@ -204,6 +229,7 @@ $n=4$. We will show that $P(4)$ is true: that is $s_4=4\cdot f_{4-1}+2\cdot f_{4
 \end{adjustwidth}
 \vspace{15pt}
 
+\textbf{Step 6:} The steps above have shown that for any $k\geq 4$, if $P(3),P(4),\ldots,P(k)$ are true, then $P(k+1)$ is also true. Combined with the base cases, which show that $P(3),P(4)$ are true, we have shown that for all $n\geq 3$, $P(n)$ is true, as desired.
 
 
 

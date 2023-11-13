@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.18)  12 NOV 2023 10:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.18)  12 NOV 2023 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -261,21 +261,26 @@ Overfull \hbox (95.2182pt too wide) in paragraph at lines 78--86
  []
 
 [2]
-Overfull \hbox (3.83803pt too wide) in paragraph at lines 122--123
-[]\OT1/cmr/bx/n/10 Step 3: \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 1$. For the in-duc-tion hy-poth-e-sis, sup-pose that $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (1)\OML/cmm/m/it/10 ; [] ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )$
+Overfull \hbox (126.31923pt too wide) in paragraph at lines 132--142
+[][] 
  []
 
-[3]
-Overfull \hbox (13.8693pt too wide) in paragraph at lines 175--177
+[3] [4]
+Overfull \hbox (13.8693pt too wide) in paragraph at lines 200--202
 \OT1/cmr/bx/n/10 Step 3: \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 4$. For the in-duc-tion hy-poth-e-sis, sup-pose that $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (3)\OML/cmm/m/it/10 ; P\OT1/cmr/m/n/10 (4)\OML/cmm/m/it/10 ; [] ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (88.97044pt too wide) in paragraph at lines 190--203
+Overfull \hbox (88.97044pt too wide) in paragraph at lines 215--228
 [][] 
  []
 
-[4] [5] (./ProblemSet7.aux) ) 
+[5]
+Overfull \hbox (8.35066pt too wide) in paragraph at lines 232--233
+[]\OT1/cmr/bx/n/10 Step 6: \OT1/cmr/m/n/10 The steps above have shown that for any $\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 4$, if $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (3)\OML/cmm/m/it/10 ; P\OT1/cmr/m/n/10 (4)\OML/cmm/m/it/10 ; [] ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )$
+ []
+
+[6] (./ProblemSet7.aux) ) 
 Here is how much of TeX's memory you used:
  4171 strings out of 476025
  65640 string characters out of 5790016
@@ -285,10 +290,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,13n,62p,608b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on ProblemSet7.pdf (5 pages, 148061 bytes).
+Output written on ProblemSet7.pdf (6 pages, 150552 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
