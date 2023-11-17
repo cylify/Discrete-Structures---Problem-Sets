@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{algpseudocode}
+\usepackage{changepage}
+
+
+
+
+\title{Test 2}
+\author{Parvesh Adi Lachman}
+\date{November 2023}
+
+\begin{document}
+\maketitle
+
+\section{Problem 1}
+
+
+
+
+
+
+
+
+\section{Problem 2}
+
+\noindent Recall the following definitons from lecture about a function $g\vcentcolon A\rightarrow B\vcentcolon$\vspace{10pt}
+
+\vspace{10pt}
+\noindent\textbf{one to one:} $\forall n,m\in A\vcentcolon (n\neq m)\implies (g(n)\neq g(m))$
+
+\vspace{10pt}
+\noindent\textbf{onto:} $\forall b\in B\vcentcolon \exists a\in A\vcentcolon g(a)=b$
+\vspace{10pt}
+
+
+\noindent Let $f\vcentcolon\mathbb{N}\rightarrow\mathbb{Z}$ be defined by $f(n)\vcentcolon = \sum_{v\in K_n} deg(v)$, where $K_n$ is the complete graph on $n$ nodes.
+\vspace{10pt}
+
+(a) Suppose you are trying to prove a statement of the form $\forall x\in S\vcentcolon [P(x)\implies Q(x)]$.  What is the first line of this "for all" proof, as we've seen in this courses? \vspace{10pt} 
+
+
+(b) Suppose you are trying to prove a statement of the form $P(x)\implies Q(x)$. What is the contrapositive of this claim? \vspace{10pt}
+
+
+\hspace{5pt} $\neg Q(x)\implies\neg P(x)$. \vspace{10pt}
+
+
+
+
+\pagebreak
+
+\section{Problem 3}
+\noindent Consider the following sequence of numbers similar to (But not the same as) the Sharp numbers.
+\begin{center}
+	\begin{minipage}{0.5\textwidth}
+		$d_1=2$ \\
+		$d_2=4$ \\
+		$d_n=d_{n-1}+2\cdot d_{n-2}$, for $n\geq 3$ \\
+	\end{minipage}
+\end{center}
+
+\vspace{10pt}
+
+\noindent\textbf{Claim:} For all $n\geq 1$, $d_n=2^n$\vspace{20pt}
+
+
+\noindent\textbf{Step 0:} For all $n\geq 1$, we want to show that $d_n=2^n$.\vspace{15pt}
+
+\noindent\textbf{Step 1:} For any $n\geq 1$, let $P(n)$ be the property that $d_n=2^n$. We want to show $\forall n\geq 1\vcentcolon P(n)$. \vspace{15pt}
+
+\noindent\textbf{Step 2:} As base cases consider when\vspace{7pt}
+
+$n=1$. We will show that $P(1)$ is true: that is, that $d_1=2^1$. Fortunately,
+
+\begin{center}
+	left hand side $=d_1=2=2^1=$ right hand side \\ 
+\end{center}
+
+$n=2$. We will show that $P(2)$ is true: that is, that $d_2=2^2$. Fortunately,
+
+\begin{center}
+	left hand side $=d_2=4=2^2=$ right hand side \\
+\end{center}
+
+
+\noindent\textbf{Step 3:} Let $k\geq 2$. For the induction hypothesis, suppose that $P(1),..,P(k)$ are true, or equivalently, that for all $1\leq k' \leq k\vcentcolon P(k')$. That is, suppose that 
+
+\begin{center}
+	$\forall 1\leq k'\leq k\vcentcolon d_{k'}=2^{k'}$
+\end{center}
+\vspace{15pt}
+
+
+\noindent\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using our induction assumptions that $P(1),..,P(k+1)$ are true. That is, we prove that
+\begin{center}
+	$d_{k+1}=2^{k+1}$ \\
+\end{center}
+\vspace{15pt}
+
+
+\noindent\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(1),...,P(k)$ are true) is as follows:
+\vspace{5pt}
+
+\begin{adjustwidth}{-0.25cm}{}
+	\noindent
+	\hspace{-3cm}
+	\begin{sloppypar}
+		\begin{tabular}{l l l l}
+			Left hand side of $P(k)$ & $=$ & $d_{k+1}$ & \\
+									 & $=$ & $d_{k}+2\cdot d_{k-1}$ & By def of sequence \\
+									 & $=$ & $2^k+2\cdot 2^{k-1}$ & By IH \\
+									 & $=$ & $2^k+2^k$ & By algebra \\
+									 & $=$ & $2\cdot 2^k$ & By algebra \\
+									 & $=$ & $2^{k+1}$ & By algebra \\
+									 & $=$ & Right hand side of $P(k+1)$ & \\
+		\end{tabular}
+	\end{sloppypar}
+	
+\end{adjustwidth}
+\vspace{15pt}
+
+\noindent\textbf{Step 6:} The steps above have shown that for any $k\geq 2$, if $P(1),...,P(k)$ are true, then $P(k+1)$ is also true. Combined with the base cases which show that $P(1)$ and $P(2)$ are true, we have shown that for all $n\geq 1$, $P(n)$ is true, as desired. \qed
+
+
+
+
+\end{document}
