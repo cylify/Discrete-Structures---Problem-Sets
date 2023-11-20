@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.18)  17 NOV 2023 01:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.18)  20 NOV 2023 09:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -204,20 +204,20 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./Test2.aux)
 \openout1 = `Test2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count285
@@ -237,43 +237,123 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 17.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 24.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [1
+)
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 44--44
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 60--63
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 46--46
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 48--48
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 50--50
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 52--52
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (51.10484pt too wide) in paragraph at lines 40--55
+[]  
+ []
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 2894) in paragraph at lines 92--93
+[]|\OT1/cmr/bx/n/10 Reason this State-ment is True
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 94--94
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 96--96
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 98--98
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 100--100
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 102--102
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 104--104
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 106--106
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (4.66254pt too wide) in paragraph at lines 108--108
+[]|$ \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (48.2594pt too wide) in paragraph at lines 90--112
+[]  
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 129--132
 
  []
 
 
-Overfull \hbox (21.18596pt too wide) in paragraph at lines 112--121
+Overfull \hbox (54.17175pt too wide) in paragraph at lines 181--190
 [][] 
  []
 
-[2] [3] (./Test2.aux) ) 
+[4] [5] (./Test2.aux) ) 
 Here is how much of TeX's memory you used:
- 4143 strings out of 476025
- 65178 string characters out of 5790016
- 1861388 words of memory out of 5000000
- 24550 multiletter control sequences out of 15000+600000
- 520479 words of font info for 68 fonts, out of 8000000 for 9000
+ 4117 strings out of 476025
+ 64921 string characters out of 5790016
+ 1864388 words of memory out of 5000000
+ 24532 multiletter control sequences out of 15000+600000
+ 516149 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,62p,317b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Test2.pdf (3 pages, 142445 bytes).
+ 57i,12n,62p,475b,208s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Test2.pdf (5 pages, 173994 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,24 +6,59 @@
 \usepackage{algpseudocode}
 \usepackage{changepage}
 
-
-
-
-\title{Test 2}
-\author{Parvesh Adi Lachman}
-\date{November 2023}
+%\title{Test 2}
+%\author{Parvesh Adi Lachman}
+%\date{November 2023}
 
 \begin{document}
-\maketitle
+
+\begingroup  
+  \centering
+  \LARGE Test 2\\[1.25em]
+  \large Parvesh Adi Lachman\par\vspace{5pt}
+  \large November 2023\par
+\endgroup
+
 
 \section{Problem 1}
+\noindent\textbf{Claim:} Let $G=(W,E)$ be a (simple, undirected) graph with $|W|\geq 5$. Then there are two distinct subsets of nodes $U,V\subseteq W$ with $|U| = |V| =2$ such that $\sum_{x\in U} deg(x)=\sum_{x\in V} deg(x)$.\vspace{15pt}
+
+\noindent\textbf{Proof:} We will prove this claim using the Pigeonhole Principle. 
+
+\begin{itemize}
+	\item Let the pigeons ($A$) be the set of all subsets of $W$ with exactly two elements.
+	\item Let the pigeonholes ($B$) be the set of all possible sums of degrees of nodes in subsets of $W$ with exactly two elements. Thus, $B\vcentcolon =\{0,1,2,...,2|W|-1\}$
+	\item Let $f\vcentcolon A\rightarrow B$ be defined by $f(T)\vcentcolon =\sum_{x\in T} deg(x)$. Note that $f$ is a well defined function:
+		\begin{enumerate}[(1)]
+			\item for any pigeon $T\in A$, $f(T)=\sum_{x\in T} deg(x)$ is computable because $T$ is a finite set and $deg(x)$ is defined for all $x\in W$.
+			\item for any pigeon $T\in A$, if $f(T_1)=b$ and $f(T_2)=c$ then $b=c$ because $f(T_1)=\sum_{x\in T_1} deg(x)$ and $f(T_2)=\sum_{x\in T_2} deg(x)$, and since $T_1$ and $T_2$ are subsets of $W$, $\sum_{x\in T_1} deg(x)=\sum_{x\in T_2} deg(x)$. 
+			\item for any pigeon $T\in A$, $f(T)=\sum_{x\in T} deg(x)$ is within the codomain $B$ because $T$ is a subset of $W$ and $deg(x)$ is defined for all $x\in W$.
+		\end{enumerate}	
+\end{itemize}
+
+\begin{flushleft}
+	\begin{tabular}{|p{0.5cm}|p{6.6cm}|p{5.5cm}|}
+		\hline
+		 & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+		\hline
+		$\implies$ & $|A|= \binom{|W|(|W|-1)}{2}$, where $|W|\geq 5$ & Because $A=\binom{|W|}{2}$ \\
+		\hline
+		$\implies$ & $|B|= 2|W|-1$, where $|W|\geq 5$& Because $B=\{0,1,2,...,2|W|-1\}$ \\
+		\hline
+		$\implies$ & $|A|>|B|$ & Since $\binom{|W|(|W|-1)}{2}> 2|W|-1$ \\
+		\hline
+		$\implies$ & $\exists a_1a_2\in A\vcentcolon [(a_1\neq a_2)\land (f(a_1)=f(a_2))]$ & By the Pigeonhole Principle \\
+		\hline
+		$\implies$ & $\exists U,V\subseteq W\vcentcolon [(U\neq V)\land (|U|=|V|=2)\land (\sum_{x\in U} deg(x)=\sum_{x\in V} deg(x))]$ & By def of $A$ and $f$ \\
+		\hline
+	\end{tabular}
+\end{flushleft}\vspace{15pt}
+
+\qed
 
 
 
-
-
-
-
+\pagebreak
 
 \section{Problem 2}
 
@@ -37,16 +72,50 @@
 \vspace{10pt}
 
 
-\noindent Let $f\vcentcolon\mathbb{N}\rightarrow\mathbb{Z}$ be defined by $f(n)\vcentcolon = \sum_{v\in K_n} deg(v)$, where $K_n$ is the complete graph on $n$ nodes.
+\noindent\textbf{Claim:} Let $f\vcentcolon\mathbb{N}\rightarrow\mathbb{Z}$ be defined by $f(n)\vcentcolon = \sum_{v\in K_n} deg(v)$, where $K_n$ is the complete graph on $n$ nodes.
 \vspace{10pt}
 
-(a) Suppose you are trying to prove a statement of the form $\forall x\in S\vcentcolon [P(x)\implies Q(x)]$.  What is the first line of this "for all" proof, as we've seen in this courses? \vspace{10pt} 
+(a) For all $x\in S$, we want to show that if $P(x)$ is true then $Q(x)$ is also true.\vspace{10pt}
+
+(b) \hspace{5pt} $\neg Q(x)\implies\neg P(x)$. \vspace{10pt}
 
 
-(b) Suppose you are trying to prove a statement of the form $P(x)\implies Q(x)$. What is the contrapositive of this claim? \vspace{10pt}
+(c) To prove $P(x)\implies Q(x)$ by contrapositive we assume $\neg Q(x)$ and use that to show $\neg P(x)$. \vspace{10pt}
 
+(d) $\forall n,m\in\mathbb{N}\vcentcolon (n\neq m)\implies (f(n)\neq f(m))$ \vspace{10pt}
 
-\hspace{5pt} $\neg Q(x)\implies\neg P(x)$. \vspace{10pt}
+(e) \textbf{Proof:} We want to show $\forall n,m\in\mathbb{N}\vcentcolon (n\neq x)\implies (f(n)\neq f(m))$. To prove this statement, we want to show that for any $n,m\in\mathbb{N}$, if $n\neq m$ then $f(n)\neq f(m)$.  We will prove the equivalent contrapositive, that is, $\exists n,m\in\mathbb{N}\vcentcolon f(n)=f(m)\implies n=m$.  To do this we will assume $f(n)=f(m)$ and use that to show $n=m$. \vspace{10pt} 
+
+\begin{flushleft}
+	\begin{tabular}{|p{0.5cm}|p{5.8cm}|p{6.2cm}|}
+		\hline
+		 & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+		\hline
+		$\implies$ & $f(n)=f(m)$ & Given \\
+		\hline
+		$\implies$ & $\sum_{v\in K_n} \text{deg}(v) = \sum_{v\in K_m} \text{deg}(v)$ & By the definition of $f$ \\
+		\hline
+		$\implies$ & $n(n-1)=m(m-1)$ & By the definition of $K_n$ and $K_m$, WLOG $\sum_{v\in K_n} deg(v)=2|E|$, where $|E| = \frac{n(n-1)}{2}$, thus by algebra $\sum_{v\in K_n} deg(v)=|E|$\vspace{5pt} \\
+		\hline
+		$\implies$ & $n^2-n=m^2-m$ & By algebra \\
+		\hline
+		$\implies$ & $n^2-n-m^2+m=0$ & By algebra \\
+		\hline
+		$\implies$ & $(n-m)(n+m-1)=0$ & Since $n^2-n-m^2+m=(n-m)(n+m-1)$ (By algebra) \\
+		\hline
+		$\implies$ & $n-m=0$ & Since $n,m\in\mathbb{N}$, $n+m-1\neq 0$ \\
+		\hline
+		$\implies$ & $n=m$ & By algebra \\
+		\hline
+
+	\end{tabular}
+\end{flushleft}\vspace{15pt}
+
+Thus, we have shown that for any $n,m\in\mathbb{N}$, if $f(n)=f(m)$ then $n=m$. \qed\vspace{15pt}
+
+(f)
+\textbf{Counter Example:} To prove $f$ is not onto, we want to show the negation of the definition of onto. That is, we want to show that $\exists b\in\mathbb{Z}\vcentcolon \forall a\in\mathbb{N}\vcentcolon f(a)\neq b$. Consider $b=0,b\in\mathbb{Z}$.  In a complete graph $K_n$, there exists no $f(a)=\sum_{v\in K_a} deg(v)$.  Meaning there is no $a\in\mathbb{N}$ that $a$ maps to $b\in\mathbb{Z}$.  Thus $f$ is not onto. \vspace{10pt} 
+
 
 
 
@@ -112,7 +181,7 @@ $n=2$. We will show that $P(2)$ is true: that is, that $d_2=2^2$. Fortunately,
 		\begin{tabular}{l l l l}
 			Left hand side of $P(k)$ & $=$ & $d_{k+1}$ & \\
 									 & $=$ & $d_{k}+2\cdot d_{k-1}$ & By def of sequence \\
-									 & $=$ & $2^k+2\cdot 2^{k-1}$ & By IH \\
+									 & $=$ & $2^k+2\cdot 2^{k-1}$ & By IH since $1\leq k-1\leq k$\\
 									 & $=$ & $2^k+2^k$ & By algebra \\
 									 & $=$ & $2\cdot 2^k$ & By algebra \\
 									 & $=$ & $2^{k+1}$ & By algebra \\
