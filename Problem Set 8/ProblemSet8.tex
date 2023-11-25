@@ -5,6 +5,7 @@
 \usepackage{mathtools}
 \usepackage{algpseudocode}
 \usepackage{changepage}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 
 
 
@@ -22,25 +23,217 @@
 \end{center}
 \vspace{10pt}
 
+(a)\vspace{5pt}
 
-(a)
+\begin{adjustwidth}{-1.5cm}{}
+	\begin{tabular}{|p{1.5cm}|p{6.6cm}|p{5.5cm}|}
+		\hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+		\vspace{1pt}
+		WTS & $\forall v\in V\vcentcolon v\equiv_f v$ & By def of reflexive \\
+		\hline
+		Consider any $v\in V$. WTS & $v\equiv_f v$ & By rephrasing \\
+		\hline
+		 & $f(v)=f(v)$ & Since $=$ is reflexive \\
+		\hline
+		$\Rightarrow$ & $v\equiv_f v$ & By definition $\equiv_f$\\
+		\hline		
+	\end{tabular}
+\end{adjustwidth}
+\vspace{10pt}
 
 
+(b) 
+\vspace{5pt}
+
+\begin{adjustwidth}{-1.5cm}{}
+	\begin{tabular}{|p{1.5cm}|p{6.6cm}|p{5.5cm}|}
+		\hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+		\vspace{1pt}
+		WTS & $\forall v,u\in V$, \textit{if} $u\equiv_f v$ then $v\equiv_f u$  & By def of symmetric \\
+		\hline
+		Consider any $u,v\in V$. Suppose & $u\equiv_f v$ & By this is the antecedent \\
+		\hline
+		WTS & $v\equiv_f u$  & This is the consequent \\
+		\hline
+		$\Rightarrow$ & $f(u)=f(v)$ & By definition of $u\equiv_f v$ \\
+		\hline
+		$\Rightarrow$ & $f(v)=f(u)$ & Since $=$ is symmetric \\
+		\hline
+		$\Rightarrow$ & $v\equiv_f u$ & By def of $\equiv_f$ \\
+		\hline
+	\end{tabular}
+\end{adjustwidth}
+\vspace{10pt}
+
+(c)\vspace{5pt}
+
+\begin{adjustwidth}{-1.5cm}{}
+	\begin{tabular}{|p{1.5cm}|p{6.6cm}|p{5.5cm}|}
+		\hline
+        & \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+        \hline
+		\vspace{1pt}
+		WTS & $\forall v,u,w\in V$, \textit{if} $u\equiv_f v\land v\equiv_f w\Rightarrow u\equiv_f w$ & By def of transitive \\
+		\hline
+		Consider any $u,v,w\in V$. Suppose & $u\equiv_f v\land v\equiv_f w$ & By this is the antecedent \\
+		\hline
+		WTS & $u\equiv_f w$ & This is the consequent \\
+		\hline
+		$\Rightarrow$ & $f(u)=f(v)\land f(v)=f(w)$ & By def of $u\equiv_f v\land v\equiv_f w$ \\
+		\hline
+		$\Rightarrow$ & $f(u)=f(w)$ & By transivity of $=$ \\
+		\hline
+		$\Rightarrow$ & $u\equiv_f w$ & By definition of $\equiv_f$ \\
+		\hline
+	\end{tabular}
+\end{adjustwidth}
+\vspace{15pt}
+
+(d) 
+
+\hspace{0.5cm} There are * equivalence classes of $\equiv_f$. 
+\vspace{2pt}
+
+\hspace{0.5cm} Informally, the equivalence classes are: the sets of vertices that have the same colour.
+\vspace{2pt}
+
+\hspace{0.5cm} In precise mathematical language, the equivalence classes of $\equiv_f$ are: 
+\vspace{5pt}
+
+The proof that these are the equivalence classes is as follows:\vspace{5pt}
+
+\begin{adjustwidth}{-1.5cm}{} 
+	\begin{tabular}{|p{1.5cm}|p{6.6cm}|p{5.5cm}|}
+		\hline
+		& \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+		\hline
+		 & & By def of equivalence class \\
+		\hline
+		$\Rightarrow$ & & \\
+		\hline
+		$\Rightarrow$ & & \\
+		\hline
+	\end{tabular}
+\end{adjustwidth}
+
+\vspace{5pt}
 
 
 \pagebreak
 \section{Problem 2}
-\noindent\textbf{Claim:} 
+\noindent\textbf{Claim:} Suppose a graph $G=(V,E)$ is 2-colourable using the colouring $f\vcentcolon V\rightarrow \{0,1\}$. Then for any path $Q$, the length of $Q$ has a parity $|f(u)-f(v)|$, where $u$ and $v$ are the endpoints of $Q$.
+
+\vspace{15pt}
+
+\noindent\textbf{Step 0:} For all $\text{len}(Q)\geq 0$, we want to show that $\text{len}(Q)$ has a parity of $|f(u)-f(v)|$, where $u$ and $v$ are the endpoints of $Q$.\vspace{10pt}
+
+\noindent\textbf{Step 1:} For any $n\geq 0$, let $P(n)$ be the property that for all paths of length $n$, $\text{parity}(n)=|f(u)-f(v)|$, where $u$ and $v$ are the path's endpoints.\vspace{10pt}
+
+\noindent\textbf{Step 2:} As a base case, consider when $n=0$. We will show that $P(0)$ is true: that is, that $\text{parity}(0)=|f(u)-f(v)|$. Consider any path of length $0$. We want to show $\text{parity}(0)=|f(u)-f(v)|$.  Fortunately, since this path has no edges, the endpoints are the same node. Therefore, $\text{parity}(0)=|f(u)-f(v)|$ is true.\vspace{10pt} 
+
+\noindent\textbf{Step 3:} Let $k \geq 0$. For the induction hypothesis, suppose $P(k)$ is true. That is, suppose that for all paths of length $k$, $\text{parity}(k)=|f(u)-f(v)|$, where $u$ and $v$ are the path's endpoints.\vspace{10pt}
+
+\noindent\textbf{Step 4:} Now we prove that $P(k+1)$ is true, using the (hypothetical) induction assumption that $P(k)$ is true. That is, we prove for all paths of length $k+1$, $\text{parity}(k+1)=|f(u)-f(v)|$, where $u$ and $v$ are the path's endpoints.\vspace{10pt}
+
+\noindent\textbf{Step 5:} The proof that $P(k+1)$ is true (given that $P(k)$ is true) is as follows:\vspace{5pt}
+
+Consider any path of length $k+1$. We want to show that $\text{parity}(k+1)=|f(u)-f(v)|$. This path can be split into two paths: one of length $k$ and one of length $1$.\vspace{5pt}
+
+There are two cases:
+
+$|f(u)-f(v)|=1$:
+
+\begin{adjustwidth}{1.5cm}{}
+	\begin{sloppypar}
+	\begin{tabular}{l l l}
+		$\Rightarrow$ & $\text{parity}(k+1)$ & LHS of $P(k+1)$ \\
+		$\Rightarrow$ & $\text{parity}(k)+1$ & By def of parity \\
+		$\Rightarrow$ & $|f(u)-f(v)|+1$ & By IH \\
+		$\Rightarrow$ & $1+1$ & By def of $|f(u)-f(v)|$ \\
+		$=$ & $2$ & By algebra \\
+		$\Rightarrow$ & even & By def of even \\
+	\end{tabular}
+\end{sloppypar}
+\end{adjustwidth}\vspace{15pt}
 
 
 
+$|f(u)-f(v)|=0$
+
+\begin{adjustwidth}{1.5cm}{}
+	\begin{sloppypar}
+	\begin{tabular}{l l l}
+		$\Rightarrow$ & $\text{parity}(k+1)$ & LHS of $P(k+1)$ \\
+		$\Rightarrow$ & $\text{parity}(k)+1$ & By def of parity \\
+		$\Rightarrow$ & $|f(u)-f(v)|+1$ & By IH \\
+		$\Rightarrow$ & $0+1$ & By def of $|f(u)-f(v)|$ \\
+		$=$ & $1$ & By algebra \\
+		$\Rightarrow$ & odd & By def of odd \\
+	\end{tabular}
+\end{sloppypar}
+\end{adjustwidth}\vspace{10pt}
+
+Therefore we have shown that \textit{if} $P(k)$ is true, \textit{then} $P(k+1)$ is true, for all $k\geq 0$. \vspace{10pt}
 
 
+\noindent\textbf{Step 6:} The steps above have shown that for any $k\geq 0$, if $P(k)$ is true, then $P(k+1)$ is also true. Combined with the base case, which shows that $P(0)$ is true, we have shown that for all $n\geq 0$, $P(n)$ is true, as desired. \vspace{10pt}
 \pagebreak
+
+
+
 \section{Problem 3}
-\noindent\textbf{Claim:}  
+
+\noindent Consider the algorithm below, which takes as input a connected graph $G=(V,E)$ and tries to colour it with two colours ${T,F}$ (for "true" and "false").\vspace{15pt}
 
 
+
+\begin{algorithm}
+    \SetAlgoNlRelativeSize{0}
+    \caption{two-colour($G=(V,E)$):}
+
+    \BlankLine
+    \tcp{Initialization}
+    Pick an arbitrary element $u_0\in V$, label it $T$ (i.e. set $f(u_0)=T$)\;
+    Set $i\leftarrow 1$\;
+
+    \BlankLine
+    \tcp{Colouring Process}
+    \While{there is an unlabeled $v\in V$ with a labeled neighbor $w$}{
+        Label $v$ with $\neg f(w)$ (i.e. set $f(u)=\neg f(w)$) and set $u_i=v$\;
+        Update $i\leftarrow i+1$\;
+    }
+
+    \BlankLine
+    \tcp{Output}
+    \Return $f$\;
+\end{algorithm}
+
+
+\noindent\textbf{Claim:} For any connected graph $G=(V,E)$, if $G$ has no odd-length cycles, then $G$ is bipartite.\vspace{15pt}
+
+
+Contrapositive: For any connected graph $G=(V,E)$, if $G$ is not bipartite, then $G$ has an odd-length cycle.
+\vspace{15pt}
+
+\begin{adjustwidth}{-1.5cm}{}
+	\begin{sloppypar}
+		\begin{tabular}{|p{1.5cm}|p{6.6cm}|p{5.5cm}|}
+		\hline
+		& \textbf{Mathematical Reasoning} & \textbf{Reason this Statement is True (From the Approved List)} \\
+		\hline
+		We want to show & For any connected graph, if $G$ is not bipartite, the $G$ has an odd-length cycle  & Since this is the contrapositive of our claim \\
+		\hline
+		Suppose & $G$ is a connected graph that is not bipartite & By assumption \\
+		\hline
+		$\Rightarrow$ & & \\
+		\hline
+		\end{tabular}
+	\end{sloppypar}
+\end{adjustwidth}
 
 
 \pagebreak
